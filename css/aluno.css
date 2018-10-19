@@ -119,7 +119,7 @@ textarea {
 html, body{
     width: 100%;
     height: 100%;
-    font-family: 'Quicksand', 'Nunito', sans-serif;
+    font-family: 'Nunito', 'Quicksand', sans-serif;
     /* font-family: 'Nunito', 'Quicksand', sans-serif; */
     background: linear-gradient( 45deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%),
         linear-gradient( 45deg, rgba(10,100,200,1) 0%, rgba(10,100,200,1) 100%);
@@ -136,7 +136,7 @@ header{
     display: flex;
     flex: 1;
     justify-content: flex-start;
-    padding-left: 26.666px;   
+    padding-left: 5%;
 }
 #logo{
     max-width: 80px;
@@ -150,19 +150,20 @@ header{
     display: flex;
     font-size: 32px;
     justify-content: center;
-    
+
 }
 .right_top_header{
     align-items: center;
     display: flex;
     flex: 1;
     justify-content: flex-end;
+    padding-right: 5%;
 }
 .bottom_header{
-    background-color: rgba(0,0,0,1);/*Undefined;*/
+    background-color: rgba(0,0,0,0.2);/*Undefined;*/
 }
 .bottom_header nav{
-   
+
 }
 .bottom_header nav ul{
     list-style-type: none;
@@ -188,17 +189,17 @@ main{
 footer{
     position: absolute;
     background-color: rgba(0, 0, 0, 0.1);
-    bottom: 0;   
+    bottom: 0;
+    flex-direction: column;
     width: 100%;
     height: 80px;
-
-
     display: flex;
     align-items: center;
     justify-content: center;
 }
 p{
     color: white;
+    font-size: 10px;
 }
 
 

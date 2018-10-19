@@ -1,8 +1,11 @@
 {
+  "name":"Tack",
+  "short_name":"Tack",
     "icons": [{
         "src": "icon.png",
         "sizes": "192x192",
         "type": "image/png"
     }],
-    "start_url": "/"
+    "start_url": "/",
+    "display":"standalone"
 }
