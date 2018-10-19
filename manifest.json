@@ -1,0 +1,19 @@
+{
+    "name":"Tack",
+    "short_name":"Tack",
+      "icons": [{
+          "src": "icon.png",
+          "sizes": "192x192",
+          "type": "image/png"
+      }],
+    "start_url": "https://h3gon101.github.io/Tack/",
+    "display":"standalone",
+    "orientation": "portrait-primary",
+    "background_color": "red",
+    "description": "The app that helps you find the best food in town!",
+    "dir": "rtl",
+    "theme_color": "aliceblue",
+    "manifest_version": 1,
+    "version":"1.0"
+}
+  
