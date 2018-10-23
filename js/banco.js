@@ -1,34 +1,34 @@
 class Banco{
-	constructor()
+	constructor(nome)
 	{
-		if(localStorage.getItem('alunos'))
-		{
-			this.banco = JSON.parse(localStorage.getItem('produtos'));
-		}
-		else
-		{
-			this.banco = [];
-		}
+		this.nome_banco = nome;
+		this.dados = JSON.parse(localStorage.getItem(this.nome_banco)) || [];
 	}
-	inserir(obj)
+	tamanho()//Retorna a quantidade de keys do banco
 	{
-		this.banco.push(obj);
-		localStorage.setItem("produtos",JSON.stringify(this.bancos));
+		return localStorage.length;
 	}
-	listar()
+	inserir(obj)//Método responsável por inserir um elemento no banco
 	{
-		return this.banco;
+		this.dados.push(obj);
+		localStorage.setItem(this.nome_banco,  JSON.stringify(this.dados));
 	}
-	buscar(busca)
+	buscar(user,senha)
 	{
 		var i;
 		for(i=0;i<this.banco.length;i++)
 		{
-			if(this.banco[i].cod == busca)
+			if(this.banco[i].user == user && this.banco[i].senha == senha)
 			{
 				return this.banco[i];
 			}
 		}
 		return false;
+	}
+
+	listar()
+	{
+		this.dados = JSON.parse(localStorage.getItem(this.nome_banco));
+		return this.dados;
 	}
 }
