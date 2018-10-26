@@ -221,11 +221,36 @@ footer{
     align-items: center;
     justify-content: center;
 }
-p{
+#github_footer_anchor{
+    color: white;
+    font-size: 14px;
+}
+#github_footer_icon{
+    width: 18px;
+    margin: 0 auto;
+}
+#email_footer_anchor{
     color: white;
     font-size: 10px;
+    margin: 0 auto;
+}
+#email_footer_icon{
+    width: 15px;
+    margin: 0 auto;
 }
 
+#mark_footer_div{
+    display: flex;
+    margin: 0 auto;
+}
+#mark_footer_icon{
+    width: 15px;
+    margin: 0 auto;
+}
+p{
+    color: white;
+    margin: 0 auto;
+}
 
 
 
