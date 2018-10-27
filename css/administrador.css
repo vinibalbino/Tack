@@ -111,73 +111,110 @@ textarea {
 ::-ms-input-placeholder { /* Microsoft Edge */
     color: black;
 }
-
+/*linear-gradient( 45deg, rgba(10,100,200,1) 0%, rgba(10,100,200,0.5) 100%),
+    linear-gradient( 45deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,1) 100%);*/
 
 html, body, main{
+    display: flex;
     width: 100%;
     height: 100%;
     /*font-family: 'Quicksand', sans-serif;*/
     font-family: 'Nunito', sans-serif;
-    color: white;
-}
-#login{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background:
-    linear-gradient( 45deg, rgba(10,100,200,1) 0%, rgba(10,100,200,0.5) 100%),
+    background: linear-gradient( 45deg, rgba(10,100,200,1) 0%, rgba(10,100,200,0.5) 100%),
     linear-gradient( 45deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,1) 100%);
-}
-#login_header{
-  display: flex;
-  flex-direction: column;
-}
-#logo{
-    max-width: 100px;
-    max-height: 80px;
-    margin: 5px;
-}
-h1{
-    font-size: 32px;
-    margin: 5px;
-    display: flex;
-    align-items: center;
-}
-form{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-input{
-    color: white;
-    font-size: 16px;
-    padding: 1px 1px 5px 1px;
-    background-color:  rgba(0,0,0,0);
-    border: none;
-    border-bottom: solid 1px white;
-    margin: 10px 10px;
-}
-a{
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    margin: 10px 10px;
-}
-#entrar{
-    color: white;
-    box-shadow: 3px 3px rgba(0, 0, 0, 0.1);
-    font-size: 16px;
-    padding: 3px 1px 3px 1px;
-    background-color:  rgba(10,200,100, 0.85);
-    border-radius: 3px;
-    border: solid 1px white;
-    margin: 10px 10px;
-    width: 189.188px;
+    justify-content: center;
 }
 
+#buttonsActions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+#buttonsActions input {
+    width: 100%;
+    margin-top: 5%;
+    color: white;
+    border: none;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.1 );
+    font-size: 16px;
+    padding: 6px 3px;
+    background-color:  rgba(10,200,100, 1);
+    border-radius: 3px;
+}
+
+#buttonsActions input:first-child {
+    margin-top: 0;
+}
+
+#cadastroAluno {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#cadastroAluno p {
+  color: white;
+  font-size: 18px;
+}
+
+#cadastroProfe{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#cadastroProfe p {
+  color: white;
+  font-size: 18px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.formulario input {
+  color: white;
+  font-size: 16px;
+  padding: 1px 1px 5px 1px;
+  background-color:  rgba(0,0,0,0);
+  border: none;
+  border-bottom: solid 1px white;
+  margin: 10px 10px;
+}
+
+.buttonsForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.buttonsForm button {
+    width: 60%;
+    margin-top: 5%;
+    margin-right: 9.5%;
+    color: white;
+    border: none;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.1 );
+    font-size: 16px;
+    padding: 6px 3px;
+    background-color:  rgba(10,200,100, 1);
+    border-radius: 5px;
+}
+
+.buttonsForm button:last-child {
+    width: 50%;
+    margin-right: 0;
+}
 
 
 /* ==========================================================================
