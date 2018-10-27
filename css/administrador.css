@@ -129,8 +129,8 @@ html, body, main{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;  
-    width: 80%; 
+    align-items: center;
+    width: 80%;
 }
 
 #buttonsActions input {
@@ -149,6 +149,30 @@ html, body, main{
     margin-top: 0;
 }
 
+#cadastroAluno {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#cadastroAluno p {
+  color: white;
+  font-size: 18px;
+}
+
+#cadastroProfe{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#cadastroProfe p {
+  color: white;
+  font-size: 18px;
+}
+
 .formulario {
     display: flex;
     flex-direction: column;
@@ -156,19 +180,40 @@ html, body, main{
     align-items: center;
 }
 
-.buttonsForm button{
+
+.formulario input {
+  color: white;
+  font-size: 16px;
+  padding: 1px 1px 5px 1px;
+  background-color:  rgba(0,0,0,0);
+  border: none;
+  border-bottom: solid 1px white;
+  margin: 10px 10px;
+}
+
+.buttonsForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.buttonsForm button {
     width: 60%;
+    margin-top: 5%;
+    margin-right: 9.5%;
     color: white;
     border: none;
     box-shadow: 3px 3px rgba(0, 0, 0, 0.1 );
     font-size: 16px;
     padding: 6px 3px;
     background-color:  rgba(10,200,100, 1);
-    border-radius: 3px;
+    border-radius: 5px;
 }
 
 .buttonsForm button:last-child {
-    width: 40%;
+    width: 50%;
+    margin-right: 0;
 }
 
 

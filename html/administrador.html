@@ -25,26 +25,30 @@
       <input type="button" value="Cadastrar Aluno" id="btn_aluno" >
       <input type="button" value="Cadastrar Professor" id="btn_profe" >
     </div>
-    <div class="" id="cadastroAluno">
+    <div class="hidden" id="cadastroAluno">
       <p>Cadastro de aluno</p>
       <form class="formulario">
         <input type="text" id="cadastroNomealuno" placeholder="Nome completo do aluno"/>
         <input type="text" id="cadastroCpfaluno" placeholder="Cpf do aluno"/>
         <input type="email" id="cadastroEmailaluno" placeholder="E-mail do aluno"/>
         <div class="buttonsForm">
-          <button>Confirmar</button>
-          <button>Limpar</button>
+          <button id="btn_cadastro_Aluno">Confirmar</button>
+          <button class="limpar">Limpar</button>
         </div>
-      </form> 
+      </form>
       <div>
-      </div> 
+      </div>
     </div>
-    <div class="hidden" id="CadastroProfessor">
+    <div class="" id="cadastroProfe">
     <p>Cadastro De Professor</p>
-      <form class="formulario"> 
+      <form class="formulario">
        <input type="text" id="cadastroNomeProfessor" placeholder="Nome completo do Professor"/>
        <input type="text" id="cadastroCpfProfessor" placeholder="Cpf do professor"/>
-       <input type="email" id="cadastroEmailAluno" placeholder="E-mail do professor"/>
+       <input type="email" id="cadastroEmailProfessor" placeholder="E-mail do professor"/>
+       <div class="buttonsForm">
+         <button id="btn_cadastro_Professor">Confirmar</button>
+         <button class="limpar">Limpar</button>
+       </div>
       </form>
     </div>
   </main>
