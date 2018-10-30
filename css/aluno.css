@@ -98,6 +98,17 @@ textarea {
    ========================================================================== */
     /*font-family: 'Quicksand', sans-serif;*/
     /*font-family: 'Nunito', sans-serif;*/
+:root{
+    --default-aeration: 16px; 
+    --default-semi-aeration: 8px;
+
+    --primary-color: rgba(10, 100, 200, 1.0);
+    --secundary-color: rgba(10, 200, 100,1.0);
+
+    --footer-font-size: 16px;
+}
+
+
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: rgba(225, 225, 225, 1);
@@ -123,25 +134,31 @@ html, body{
     font-family: 'Nunito', 'Quicksand', sans-serif;
     background: linear-gradient( 45deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.1) 100%),
         linear-gradient( 45deg,rgba(10, 100, 200, 1.0) 0%, rgba(10, 100, 200,1.0) 100%);
+}
+body{
     position: relative;
 }
 header{
     background-color: rgba(38, 222, 129, 0);
+    padding: var(--default-aeration) 0px;
 }
+
 .top_header{
     display: flex;
+    padding: 0px var(--default-aeration);
 }
 .left_top_header{
     align-items: center;
     display: flex;
     flex: 1;
     justify-content: flex-start;
-    padding-left: 5%;
+}
+#logo_anchor{
+    margin-right: var(--default-semi-aeration);
 }
 #logo{
-    max-width: 40px;
+    max-width: 35px;
     max-height: auto;
-    margin: 5px;
 }
 #title_div{
     display: flex;
@@ -149,27 +166,28 @@ header{
     align-items: flex-end;
 }
 .after_logo_title{
-    margin: 5px 5px 0px 5px;
+    /* margin: 5px 5px 0px 5px; */
     padding: 0px;
     text-transform: uppercase;
     color: white;
     font-size: 28px;
     letter-spacing: -2px;
     justify-content: center;
-    font-weight: 700;
+    font-weight: 900;
 }
 .right_top_header{
     align-items: center;
     display: flex;
     flex: 1;
     justify-content: flex-end;
-    padding-right: 5%;
+    /* padding-right: 5%; */
 }
 #user_icon{
     max-width: 45px;
 }
+
 .bottom_header{
-    background-color: rgba(0, 0, 0, 0.1);/*Undefined;*/
+    
 }
 .bottom_header nav{
 
@@ -179,6 +197,8 @@ header{
     display: flex;
 }
 .bottom_header nav ul li{
+    padding: var(--default-semi-aeration);
+    background-color: rgba(0, 0, 0, 0.1);
     align-items: center;
     border-right: solid 3px white   ;
     display: flex;
@@ -190,22 +210,22 @@ header{
 }
 #bottom_header_home{
     height: auto;
-    width: 25px;    
+    width: 25px; 
 }
 #bottom_header_note{
     height: 25px; 
     width: auto;   
 }
 #bottom_header_calendar{
-    height: auto;
-    width: 25px;
+    height: 25px; 
+    width: auto;
 }
 #bottom_header_more{
     height: auto;
     width: 25px;
 }
 main{
-    padding-top: 125px;
+    padding-top: 100px;
     padding-bottom: 80px;
 }
 
@@ -214,52 +234,65 @@ footer{
     position: absolute;
     background-color: rgba(0, 0, 0, 0.2);
     bottom: 0;
-    flex-direction: column;
     width: 100%;
     height: 80px;
+}
+#footer_div{
+    flex-direction: column;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 #github_footer_anchor{
+    text-decoration: none;
     color: white;
-    font-size: 14px;
+    font-size: var(--footer-font-size);
 }
 #github_footer_icon{
-    width: 18px;
+    width: 16px;
+    margin: 0 0;
+}
+#email_footer_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#email_footer_icon{
+    width: 16px;
     margin: 0 auto;
 }
 #email_footer_anchor{
+    text-decoration: none;
     color: white;
-    font-size: 10px;
     margin: 0 auto;
+    font-size: 12px;
 }
-#email_footer_icon{
-    width: 15px;
-    margin: 0 auto;
-}
+
 
 #mark_footer_div{
     display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 0 auto;
 }
 #mark_footer_icon{
-    width: 15px;
+    height: 16px;
     margin: 0 auto;
 }
 p{
     color: white;
     margin: 0 auto;
+    font-size: var(--footer-font-size);
 }
 
 
 
 
 
-
-
-/* Para reaproveitamento */
-
+/* ==========================================================================
+   Para reaproveitamento
+   ========================================================================== */
+/* 
 h1{
     font-size: 32px;
     margin: 5px;
@@ -297,8 +330,16 @@ a{
     margin: 10px 10px;
     width: 189.188px;
 }
+*/
 
+/* ==========================================================================
+    Self-Help
+   ========================================================================== */
 
+/* Exemplo de como implementar variável; 
+:root{
+    --minha-variavel-css: 100px;
+} */
 
 /* ==========================================================================
    Helper classes
