@@ -41,10 +41,10 @@ btn_confirmarProfessor.addEventListener('click', function(){
     var cpf_profe = document.querySelector("#cadastroCpfProfessor").value;
     var email_profe = document.querySelector("#cadastroEmailProfessor").value;
     var professor = new Professor(nome_profe, cpf_profe, cpf_profe, cpf_profe, email_profe);
-    var banco = new Banco("professores");
+    var banco = new Banco("Professores");
     banco.inserir(professor);
 });
 
 btn_limpar.addEventListener('click', function(){
-
+  
 });
