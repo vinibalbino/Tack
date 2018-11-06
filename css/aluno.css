@@ -99,13 +99,13 @@ textarea {
     /*font-family: 'Quicksand', sans-serif;*/
     /*font-family: 'Nunito', sans-serif;*/
 :root{
-    --default-aeration: 16px; 
-    --default-semi-aeration: 8px;
+    --default-aeration: 22px; 
+    --default-semi-aeration: 13px;
 
     --primary-color: rgba(10, 100, 200, 1.0);
     --secundary-color: rgba(10, 200, 100,1.0);
 
-    --footer-font-size: 16px;
+    --footer-font-size: 12px;
 }
 
 
@@ -133,7 +133,8 @@ html, body{
     /* font-family: 'Quicksand', 'Nunito', sans-serif; */
     font-family: 'Nunito', 'Quicksand', sans-serif;
     background: linear-gradient( 45deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.1) 100%),
-        linear-gradient( 45deg,rgba(10, 100, 200, 1.0) 0%, rgba(10, 100, 200,1.0) 100%);
+                linear-gradient( 45deg, var(--primary-color) 0%, var(--primary-color) 100%);
+    background-attachment: fixed;
 }
 body{
     position: relative;
@@ -157,8 +158,8 @@ header{
     margin-right: var(--default-semi-aeration);
 }
 #logo{
-    max-width: 35px;
-    max-height: auto;
+    width: 35px;
+    height: auto;
 }
 #title_div{
     display: flex;
@@ -168,10 +169,9 @@ header{
 .after_logo_title{
     /* margin: 5px 5px 0px 5px; */
     padding: 0px;
-    text-transform: uppercase;
     color: white;
-    font-size: 28px;
-    letter-spacing: -2px;
+    font-size: 24px;
+    letter-spacing: -3px;
     justify-content: center;
     font-weight: 900;
 }
@@ -183,7 +183,7 @@ header{
     /* padding-right: 5%; */
 }
 #user_icon{
-    max-width: 45px;
+    height: 35px;   
 }
 
 .bottom_header{
@@ -200,7 +200,7 @@ header{
     padding: var(--default-semi-aeration);
     background-color: rgba(0, 0, 0, 0.1);
     align-items: center;
-    border-right: solid 3px white   ;
+    border-right: solid 2px white;
     display: flex;
     flex: 3;
     justify-content: center;
@@ -236,6 +236,10 @@ footer{
     bottom: 0;
     width: 100%;
     height: 80px;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 #footer_div{
     flex-direction: column;
@@ -265,7 +269,7 @@ footer{
     text-decoration: none;
     color: white;
     margin: 0 auto;
-    font-size: 12px;
+    font-size: var(--footer-font-size);
 }
 
 
