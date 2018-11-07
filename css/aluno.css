@@ -96,8 +96,10 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-    /*font-family: 'Quicksand', sans-serif;*/
-    /*font-family: 'Nunito', sans-serif;*/
+*{
+    margin: 0px;
+    padding: 0px;
+}
 :root{
     --default-aeration: 22px; 
     --default-semi-aeration: 13px;
@@ -106,33 +108,28 @@ textarea {
     --secundary-color: rgba(10, 200, 100,1.0);
 
     --footer-font-size: 12px;
+
+    --placeholder-color: #bdc3c7;
 }
 
-
-
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: rgba(225, 225, 225, 1);
+    color: var(--placeholder-color);
     opacity: 1; /* Firefox */
 }
 
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: rgba(250, 250, 250, 1);
+    color:  var(--placeholder-color);
 }
 
 ::-ms-input-placeholder { /* Microsoft Edge */
-    color: black;
-}
-*{
-    margin: 0px;
-    padding: 0px;
+    color:  var(--placeholder-color);
 }
 
 html, body{
     width: 100%;
     height: 100%;
-    /* font-family: 'Quicksand', 'Nunito', sans-serif; */
     font-family: 'Nunito', 'Quicksand', sans-serif;
-    background: linear-gradient( 45deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.1) 100%),
+    background: linear-gradient( 45deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%),
                 linear-gradient( 45deg, var(--primary-color) 0%, var(--primary-color) 100%);
     background-attachment: fixed;
 }
@@ -140,7 +137,6 @@ body{
     position: relative;
 }
 header{
-    background-color: rgba(38, 222, 129, 0);
     padding: var(--default-aeration) 0px;
 }
 
@@ -156,6 +152,7 @@ header{
 }
 #logo_anchor{
     margin-right: var(--default-semi-aeration);
+    box-shadow: 3px 15px 20px -7px rgba(52, 73, 94,0.50);   
 }
 #logo{
     width: 35px;
@@ -169,11 +166,12 @@ header{
 .after_logo_title{
     /* margin: 5px 5px 0px 5px; */
     padding: 0px;
-    color: white;
+    color: #f1f1f1;
     font-size: 24px;
     letter-spacing: -3px;
     justify-content: center;
     font-weight: 900;
+    font-style: italic;
 }
 .right_top_header{
     align-items: center;
@@ -200,7 +198,7 @@ header{
     padding: var(--default-semi-aeration);
     background-color: rgba(0, 0, 0, 0.1);
     align-items: center;
-    border-right: solid 2px white;
+    border-right: solid 2px #f1f1f1;
     display: flex;
     flex: 3;
     justify-content: center;
@@ -249,7 +247,7 @@ footer{
 }
 #github_footer_anchor{
     text-decoration: none;
-    color: white;
+    color: #f1f1f1;
     font-size: var(--footer-font-size);
 }
 #github_footer_icon{
@@ -267,7 +265,7 @@ footer{
 }
 #email_footer_anchor{
     text-decoration: none;
-    color: white;
+    color: #f1f1f1;
     margin: 0 auto;
     font-size: var(--footer-font-size);
 }
@@ -284,57 +282,10 @@ footer{
     margin: 0 auto;
 }
 p{
-    color: white;
+    color: #f1f1f1;
     margin: 0 auto;
     font-size: var(--footer-font-size);
 }
-
-
-
-
-
-/* ==========================================================================
-   Para reaproveitamento
-   ========================================================================== */
-/* 
-h1{
-    font-size: 32px;
-    margin: 5px;
-    display: flex;
-    align-items: center;
-}
-form{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-input{
-    color: white;
-    font-size: 16px;
-    padding: 1px 1px 5px 1px;
-    background-color:  rgba(0,0,0,0);
-    border: none;
-    border-bottom: solid 1px white;
-    margin: 10px 10px;
-}
-a{
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    margin: 10px 10px;
-}
-#entrar{
-    color: white;
-    box-shadow: 3px 3px rgba(0, 0, 0, 0.2);
-    font-size: 16px;
-    padding: 3px 1px 3px 1px;
-    background-color:  rgba(10,200,100, 0.85);
-    border-radius: 3px;
-    border: solid 1px white;
-    margin: 10px 10px;
-    width: 189.188px;
-}
-*/
 
 /* ==========================================================================
     Self-Help
