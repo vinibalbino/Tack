@@ -29,8 +29,14 @@
         <h1 id="after_logo_title">Tack</h1>
       </div>
       <form>
-        <input type="text" placeholder="Usuário" class=""  id="login_usuario" autofocus/>
-        <input type="password" placeholder="Senha" class="" id="senha_usuario"/>
+        <div id="usuario_div">
+          <input type="text" class=""  id="login_usuario" autofocus required/>
+          <label for="login_usuario">Usuário</label>
+        </div>
+        <div id="senha_div">
+          <input type="password" class="" id="login_senha" required/>
+          <label for="login_senha">Senha</label>
+        </div>
         <a href="#">Esqueceu sua senha?</a>
         <input type="button" value="Entrar"  id="entrar" />
       </form>
