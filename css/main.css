@@ -99,6 +99,7 @@ textarea {
 *{
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 :root{
     --default-aeration: 16px; 
@@ -168,22 +169,55 @@ form{
     flex-direction: column;
     justify-content: flex-start;
 }
+
+
+
+#usuario_div{
+    position: relative;
+}
+#usuario_div label{
+    position: absolute;
+    left: var(--default-aeration);
+    top: 50%;
+    transform: translateY(-50%);
+}
+#usuario_div input[type="text"]:valid ~ label{
+    display: none;
+}
+
+#senha_div{
+    position: relative;
+}
+#senha_div label{
+    position: absolute;
+    left: var(--default-aeration);
+    top: 50%;
+    transform: translateY(-50%);
+}
+#senha_div input[type="password"]:valid ~ label{
+    display: none;
+}
+
 input{
     color: #f1f1f1;
     font-size: 16px;
-    padding: 5px 1px 5px 1px;
+    padding: 5px  var(--default-semi-aeration) 5px  var(--default-semi-aeration);
     background-color:  rgba(0,0,0,0);
     border: none;
     border-bottom: solid 1px #f1f1f1;
     margin: var(--default-semi-aeration);
 }
 a{
+    padding-left: var(--default-semi-aeration);
     color: #f1f1f1;
     text-decoration: none;
     font-size: 16px;
     margin: var(--default-semi-aeration) var(--default-semi-aeration);
 }
 #entrar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #f1f1f1;
     box-shadow: 3px 15px 20px -7px rgba(52, 73, 94,0.50);  
     font-size: 16px;
@@ -191,7 +225,7 @@ a{
     background-color:  var(--secundary-color);
     border-radius: 3px;
     border: solid 1px #f1f1f1;
-    width: 190px;
+    width: 195px;
 }
 
 
