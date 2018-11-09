@@ -1,23 +1,34 @@
-function start(){
-    var usuario = document.getElementById('login_usuario').value;
-    if(usuario == "0"){
-      window.location.href = "html/aluno.html";
-    }
-    if(usuario == "1"){
-      window.location.href = "html/professor.html";
-    }
-    if(usuario == "2"){
-      window.location.href = "html/administrador.html";
-    }
-}
 
 var bd = new Banco("Alunos");
 var banco = new Banco("Professores");
+var btn_entrar = document.querySelector("#entrar");
 var btn_aluno = document.querySelector("#btn_aluno");
 var btn_professor = document.querySelector("#btn_profe");
 var btn_confirmarAluno = document.querySelector("#btn_cadastro_Aluno");
 var btn_confirmarProfessor = document.querySelector("#btn_cadastro_Professor");
 var btn_limpar = document.querySelector(".limpar");
+
+btn_entrar.addEventListener('click', function(){
+  var nome_login = document.getElementById("login_usuario").value;
+  var senha_login = document.getElementById("senha_usuario").value;
+  var logica = bd.buscar(nome_login,senha_login);
+  var logica2 = banco.buscar(nome_login, senha_login);
+  if(logica == true) {
+    window.location.href = "html/aluno.html";
+  }
+  if(logica2 == true) {
+    window.location.href = "html/professor.html";
+  }
+  if(logica == false && logica2 == false ) {
+    document.querySelector('#spamP').className = "";
+    setTimeout(function(){
+       document.querySelector('#spamP').className = "";
+    }, 1000);
+  }
+  if(nome_login == "admin" && senha_login == "admin123"){
+    window.location.href = "html/administrador.html";
+  }
+}); 
 
 btn_aluno.addEventListener('click', function(){
     document.querySelector("#buttonsActions").className="hidden";
