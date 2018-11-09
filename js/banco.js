@@ -16,11 +16,11 @@ class Banco{
 	buscar(user,senha)
 	{
 		var i;
-		for(i=0;i<this.banco.length;i++)
+		for(i=0;i<this.dados.length;i++)
 		{
-			if(this.banco[i].user == user && this.banco[i].senha == senha)
+			if(this.dados[i].usu == user && this.dados[i].senha == senha)
 			{
-				return this.banco[i];
+				return true;
 			}
 		}
 		return false;
