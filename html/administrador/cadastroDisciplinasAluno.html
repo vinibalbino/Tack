@@ -13,7 +13,7 @@
   <!-- Place favicon.ico in the root directory -->
 
   <link rel="stylesheet" href="../../css/normalize.css">
-  <link rel="stylesheet" href="../../css/administrador.css">
+  <link rel="stylesheet" href="../../css/cadastroDisciplinasAluno.css">
 
   <link href="https://fonts.googleapis.com/css?family=Nunito:400,700|Quicksand:400,700" rel="stylesheet">
 </head>
@@ -21,38 +21,18 @@
 
 
   <main>
-    <div id="buttonsActions" class="">
-      <input type="button" value="Cadastrar Aluno" id="btn_aluno" >
-      <input type="button" value="Cadastrar Professor" id="btn_profe" >
-    </div>
-    <div class="hidden" id="cadastroAluno">
-      <p>Cadastro de aluno</p>
-      <form class="formulario">
-        <input type="text" id="cadastroNomealuno" placeholder="Nome completo do aluno" autofocus/>
-        <input type="text" id="cadastroCpfaluno" placeholder="Cpf do aluno" />
-        <input type="email" id="cadastroEmailaluno" placeholder="E-mail do aluno"/>
-        <div class="buttonsForm">
-          <button id="btn_cadastro_Aluno">Confirmar</button>
-          <button class="limpar" type="reset">Limpar</button>
-          <button>Voltar</button>
-        </div>
-      </form>
-      <div>
-      </div>
-    </div>
-    <div class="hidden" id="cadastroProfe">
-    <p>Cadastro De Professor</p>
-      <form class="formulario">
-       <input type="text" id="cadastroNomeProfessor" placeholder="Nome completo do Professor" autofocus/>
-       <input type="text" id="cadastroCpfProfessor" placeholder="Cpf do professor" />
-       <input type="email" id="cadastroEmailProfessor" placeholder="E-mail do professor"/>
-       <div class="buttonsForm">
-         <button id="btn_cadastro_Professor">Confirmar</button>
-         <button class="limpar" type="reset">Limpar</button>
-         <button>Voltar</button>
-       </div>
-      </form>
-    </div>
+    <form>
+      
+      <input type="text" id="nomeDisciplina" required autofocus/>
+      <label for="nomeDisciplina">Disciplina</label>
+
+      <input type="text" id="professorDisiplina" required />
+      <label for="professorDisiplina">Professor</label>
+
+      <input type="text" id="turmaDisciplina" required />
+      <label for="turmaDisciplina">Turma</label>
+
+    </form>
   </main>
 
 
