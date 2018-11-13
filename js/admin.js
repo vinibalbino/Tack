@@ -24,6 +24,7 @@ btn_confirmarAluno.addEventListener('click', function(){
   var email_aluno = document.querySelector("#cadastroEmailaluno").value;
   var aluno = new Aluno(nome_aluno, cpf_aluno, cpf_aluno, cpf_aluno, email_aluno);
   bd.inserir(aluno);
+  widow.location.href="./administrador/cadastroDisciplinasAluno";
 });
 
 btn_confirmarProfessor.addEventListener('click', function(){
@@ -32,6 +33,7 @@ btn_confirmarProfessor.addEventListener('click', function(){
     var email_profe = document.querySelector("#cadastroEmailProfessor").value;
     var professor = new Professor(nome_profe, cpf_profe, cpf_profe, cpf_profe, email_profe);
     banco.inserir(professor);
+    widow.location.href="./administrador/cadastroDisciplinasProfessor";
 });
 
 btn_limpar.addEventListener('click', function(){
