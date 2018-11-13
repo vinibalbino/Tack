@@ -184,19 +184,11 @@ header{
 #user_icon{
     height: 35px;   
 }
-
-.bottom_header{
-    
-}
-.bottom_header nav{
-
-}
 .bottom_header nav ul{
     list-style-type: none;
     display: flex;
 }
 .bottom_header nav ul li{
-    padding: var(--default-semi-aeration);
     background-color: rgba(0, 0, 0, 0.1);
     align-items: center;
     border-right: solid 2px #f1f1f1;
@@ -207,7 +199,11 @@ header{
 .bottom_header nav ul li:last-child{
     border-right: none;
 }
+.bottom_header nav ul li a{
+    padding: var(--default-aeration);
+}
 #bottom_header_home{
+
     height: auto;
     width: 25px; 
 }
