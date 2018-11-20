@@ -96,127 +96,52 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-    /*font-family: 'Quicksand', sans-serif;*/
-    /*font-family: 'Nunito', sans-serif;*/
+
+   *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+:root{
+    --default-aeration: 22px; 
+    --default-semi-aeration: 13px;
+
+    --primary-color: rgba(10, 100, 200, 1.0);
+    --secundary-color: rgba(10, 200, 100,1.0);
+
+    --footer-font-size: 12px;
+
+    --placeholder-color: #bdc3c7;
+}
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: rgba(225, 225, 225, 1);
+    color: var(--placeholder-color);
     opacity: 1; /* Firefox */
 }
 
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: rgba(250, 250, 250, 1);
+    color:  var(--placeholder-color);
 }
 
 ::-ms-input-placeholder { /* Microsoft Edge */
-    color: black;
+    color:  var(--placeholder-color);
 }
-/*linear-gradient( 45deg, rgba(10,100,200,1) 0%, rgba(10,100,200,0.5) 100%),
-    linear-gradient( 45deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,1) 100%);*/
 
-html, body, main{
-    display: flex;
+html, body{
     width: 100%;
     height: 100%;
-    /*font-family: 'Quicksand', sans-serif;*/
-    font-family: 'Nunito', sans-serif;
-    background: linear-gradient( 45deg, rgba(10,100,200,1) 0%, rgba(10,100,200,0.5) 100%),
-    linear-gradient( 45deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,1) 100%);
-    justify-content: center;
+    font-family: 'Nunito', 'Quicksand', sans-serif;
+    background: linear-gradient( 45deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%),
+                linear-gradient( 45deg, var(--primary-color) 0%, var(--primary-color) 100%);
+    background-attachment: fixed;
 }
-
-#buttonsActions {
+body{
+    position: relative;
+}
+.formularioDisciplina{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
 }
-
-#buttonsActions input {
-    width: 100%;
-    margin-top: 5%;
-    color: white;
-    border: none;
-    box-shadow: 3px 3px rgba(0, 0, 0, 0.1 );
-    font-size: 16px;
-    padding: 6px 3px;
-    background-color:  rgba(10,200,100, 1);
-    border-radius: 3px;
-}
-
-#buttonsActions input:first-child {
-    margin-top: 0;
-}
-
-
-#cadastroAluno {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-#cadastroAluno p {
-  color: white;
-  font-size: 18px;
-}
-
-#cadastroProfe{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-#cadastroProfe p {
-  color: white;
-  font-size: 18px;
-}
-
-.formulario {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.formulario input {
-  color: white;
-  font-size: 16px;
-  padding: 1px 1px 5px 1px;
-  background-color:  rgba(0,0,0,0);
-  border: none;
-  border-bottom: solid 1px white;
-  margin: 10px 10px;
-}
-
-.buttonsForm {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
-.buttonsForm button {
-    width: 60%;
-    margin-top: 5%;
-    margin-right: 9.5%;
-    color: white;
-    border: none;
-    box-shadow: 3px 3px rgba(0, 0, 0, 0.1 );
-    font-size: 16px;
-    padding: 6px 3px;
-    background-color:  rgba(10,200,100, 1);
-    border-radius: 5px;
-}
-
-.buttonsForm button:last-child {
-    width: 50%;
-    margin-right: 0;
-}
-
 
 /* ==========================================================================
    Helper classes
