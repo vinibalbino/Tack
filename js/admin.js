@@ -18,22 +18,25 @@ btn_professor.addEventListener('click', function(){
     document.querySelector("#cadastroProfe").className ="";
 });
 
-btn_confirmarAluno.addEventListener('click', function(){
-  var nome_aluno = document.querySelector("#cadastroNomealuno").value;
-  var cpf_aluno = document.querySelector("#cadastroCpfaluno").value;
-  var email_aluno = document.querySelector("#cadastroEmailaluno").value;
-  var aluno = new Aluno(nome_aluno, cpf_aluno, cpf_aluno, cpf_aluno, email_aluno);
-  bd.inserir(aluno);
-  widow.location.href="./administrador/cadastroDisciplinasAluno";
+btn_confirmarAluno.addEventListener('click', function(evt){
+    evt.preventDefault();
+    var nome_aluno = document.querySelector("#cadastroNomealuno").value;
+    var cpf_aluno = document.querySelector("#cadastroCpfaluno").value;
+    var email_aluno = document.querySelector("#cadastroEmailaluno").value;
+    var aluno = new Aluno(nome_aluno, cpf_aluno, cpf_aluno, cpf_aluno, email_aluno);
+    bd.inserir(aluno);
+    window.location.href="./cadastroDisciplinasAluno.html";
+    console.log("GG");
 });
 
-btn_confirmarProfessor.addEventListener('click', function(){
+btn_confirmarProfessor.addEventListener('click', function(evt){
+    evt.preventDefault();
     var nome_profe = document.querySelector("#cadastroNomeProfessor").value;
     var cpf_profe = document.querySelector("#cadastroCpfProfessor").value;
     var email_profe = document.querySelector("#cadastroEmailProfessor").value;
     var professor = new Professor(nome_profe, cpf_profe, cpf_profe, cpf_profe, email_profe);
     banco.inserir(professor);
-    widow.location.href="./administrador/cadastroDisciplinasProfessor";
+    window.location.href="./cadastroDisciplinasProfessor.html";
 });
 
 btn_limpar.addEventListener('click', function(){

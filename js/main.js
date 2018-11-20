@@ -10,13 +10,13 @@ btn_entrar.addEventListener('click', function(){
   var logica = bd.buscar(nome_login,senha_login);
   var logica2 = banco.buscar(nome_login, senha_login);
   if(logica == true) {
-    window.location.href = "html/aluno.html";
+    window.location.href = "html/aluno/aluno.html";
   }
   if(logica2 == true) {
-    window.location.href = "html/professor.html";
+    window.location.href = "html/professor/professor.html";
   }
   if(nome_login == "admin" && senha_login == "admin123"){
-    window.location.href = "html/administrador.html";
+    window.location.href = "html/administrador/administrador.html";
     logica = true;
   }
   if(logica == false && logica2 == false ) {
