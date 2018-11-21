@@ -97,21 +97,26 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-   *{
+*{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    color: var(--white-color)
 }
+
 :root{
     --default-aeration: 22px; 
     --default-semi-aeration: 13px;
 
+    --footer-font-size: 12px;
+    --main-font-size: 16px;
+
     --primary-color: rgba(10, 100, 200, 1.0);
     --secundary-color: rgba(10, 200, 100,1.0);
-
-    --footer-font-size: 12px;
-
-    --placeholder-color: #bdc3c7;
+    --tertiary-color: rgba(255, 80, 80, 1.0);
+    --placeholder-color: rgba(189, 195, 199, 1.0);
+    --white-color: rgba(241, 241, 241, 1.0);
+    --black-color: rgba(52, 73, 94,1.0);
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -135,13 +140,248 @@ html, body{
                 linear-gradient( 45deg, var(--primary-color) 0%, var(--primary-color) 100%);
     background-attachment: fixed;
 }
+
 body{
     position: relative;
 }
+/* ========================================== */
+
+header{
+    display: flex;
+    background-color: var(--black-color);
+    padding: 0px var(--default-aeration);
+}
+
+.cabeçalhoEsquerda{
+    align-items: center;
+    display: flex;
+    flex: 1;
+    justify-content: flex-start;
+}
+
+.ancoraLogo{
+    margin-right: var(--default-semi-aeration);
+    box-shadow: 3px 15px 20px -7px rgba(52, 73, 94,0.50);   
+}
+
+.logo{
+    width: 35px;
+    height: auto;
+}
+
+.tituloDiv{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.tituloH1{
+    padding: 0px;
+    color: #f1f1f1;
+    font-size: 24px;
+    letter-spacing: -3px;
+    justify-content: center;
+    font-weight: 900;
+    font-style: italic;
+}
+
+.cabeçalhoDireita{
+    align-items: center;
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+}
+#ancoraLogin{
+    text-decoration: none;
+    background-color: var(--secundary-color);
+    border-radius: 3px;
+    padding: 3px 8px;
+}
+
+/* ========================================== */
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: var(--default-aeration) 0px calc(80px + var(--default-aeration)) 0px;
+}
+
 .formularioDisciplina{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
+
+.dadoDisciplinaDiv{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dadoDisciplinaDiv input{
+    width: 80%;
+}
+.dadoDisciplinaDiv label{
+    position: absolute;
+    left: calc(var(--default-aeration) + 10%);
+    top: 50%;
+    transform: translateY(-50%);
+}
+.dadoDisciplinaDiv input[type="text"]:valid ~ label{
+    display: none;
+}
+
+.botoesFormulario{
+    display: flex;
+    width: 80%;
+    height: 100%;
+    margin: var(--default-semi-aeration) 0px;;
+}
+
+.botoesFormulario input[type="button"], input[type="reset"]{
+    flex: 1;
+}
+.botoesFormulario input[type="button"]{
+    margin-right: var(--default-semi-aeration);
+}
+
+input[type="text"]{
+    background-color: rgba(0, 0, 0, 0.0);
+    border: none;
+    border-bottom: solid var(--white-color) 1px;
+    border-radius: 3px;
+    padding: 3px var(--default-aeration);
+}
+
+input[type="button"], input[type="reset"]{
+    background-color: var(--secundary-color);
+    border: none;
+    padding: 3px;
+    border-radius: 3px;
+}
+
+
+
+
+#paragrafoDisciplinasDiv{
+    width: 80%;
+    margin-bottom: var(--default-semi-aeration);
+}
+#paragrafoDisciplinas{
+    font-size: 16px;
+    font-weight: 700;
+}
+
+#divDisciplinas{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#listaDisciplinas{
+    border: solid 0px var(--white-color);
+    list-style-type: none;
+    width: 100%;
+}
+#listaDisciplinas li{
+    padding: var(--default-semi-aeration);
+    margin-bottom: var(--default-semi-aeration);
+    border: solid 1px var(--white-color);
+    border-radius: 3px; 
+}
+#listaDisciplinas li input[type="button"]{
+    margin-top: var(--default-semi-aeration);
+}
+#listaDisciplinas li:last-child{
+    margin-bottom: 0px;
+}
+#listaDisciplinas li h2{
+    font-size: var(--main-font-size);
+}
+
+/* ========================================== */
+
+#finalizar{
+    background-color: var(--tertiary-color);
+    margin-top: var(--default-semi-aeration); 
+    width: 80%;
+}
+
+/* ========================================== */
+
+footer{
+    position: absolute;
+    bottom: 0;
+    position: fixed;
+    background-color: var(--black-color);
+    width: 100%;
+    height: 80px;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#footer_div{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#github_footer_anchor{
+    text-decoration: none;
+    color: #f1f1f1;
+    font-size: var(--footer-font-size);
+}
+
+#github_footer_icon{
+    width: 16px;
+    margin: 0 0;
+}
+
+#email_footer_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#email_footer_icon{
+    width: 16px;
+    margin: 0 auto;
+}
+
+#email_footer_anchor{
+    text-decoration: none;
+    color: #f1f1f1;
+    margin: 0 auto;
+    font-size: var(--footer-font-size);
+}
+
+#mark_footer_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+#mark_footer_icon{
+    height: 16px;
+    margin: 0 auto;
+}
+
+p{
+    color: #f1f1f1;
+    margin: 0 auto;
+    font-size: var(--footer-font-size);
+}
+
 
 /* ==========================================================================
    Helper classes

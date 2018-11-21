@@ -96,21 +96,23 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-*{
+   *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    color: #f1f1f1;
 }
+
 :root{
     --default-aeration: 22px; 
     --default-semi-aeration: 13px;
 
-    --primary-color: rgba(10, 100, 200, 1.0);
-    --secundary-color: rgba(10, 200, 100,1.0);
-
     --footer-font-size: 12px;
 
+    --primary-color: rgba(10, 100, 200, 1.0);
+    --secundary-color: rgba(10, 200, 100,1.0);
     --placeholder-color: #bdc3c7;
+    --white-color: #f1f1f1;
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -134,9 +136,11 @@ html, body{
                 linear-gradient( 45deg, var(--primary-color) 0%, var(--primary-color) 100%);
     background-attachment: fixed;
 }
+
 body{
     position: relative;
 }
+
 header{
     padding: var(--default-aeration) 0px;
 }
@@ -145,27 +149,31 @@ header{
     display: flex;
     padding: 0px var(--default-aeration);
 }
+
 .left_top_header{
     align-items: center;
     display: flex;
     flex: 1;
     justify-content: flex-start;
 }
+
 #logo_anchor{
     margin-right: var(--default-semi-aeration);
     box-shadow: 3px 15px 20px -7px rgba(52, 73, 94,0.50);   
 }
+
 #logo{
     width: 35px;
     height: auto;
 }
+
 #title_div{
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
 }
+
 .after_logo_title{
-    /* margin: 5px 5px 0px 5px; */
     padding: 0px;
     color: #f1f1f1;
     font-size: 24px;
@@ -174,20 +182,23 @@ header{
     font-weight: 900;
     font-style: italic;
 }
+
 .right_top_header{
     align-items: center;
     display: flex;
     flex: 1;
     justify-content: flex-end;
-    /* padding-right: 5%; */
 }
+
 #user_icon{
     height: 35px;   
 }
+
 .bottom_header nav ul{
     list-style-type: none;
     display: flex;
 }
+
 .bottom_header nav ul li{
     background-color: rgba(0, 0, 0, 0.1);
     align-items: center;
@@ -196,29 +207,37 @@ header{
     flex: 3;
     justify-content: center;
 }
+
 .bottom_header nav ul li:last-child{
     border-right: none;
 }
+
 .bottom_header nav ul li a{
     padding: var(--default-aeration);
 }
+
 #bottom_header_home{
 
     height: auto;
     width: 25px; 
 }
+
 #bottom_header_note{
     height: 25px; 
     width: auto;   
 }
+
 #bottom_header_calendar{
     height: 25px; 
     width: auto;
 }
+
 #bottom_header_more{
     height: auto;
     width: 25px;
 }
+
+
 main{
     padding-top: 100px;
     padding-bottom: 80px;
@@ -236,30 +255,36 @@ footer{
     align-items: center;
     justify-content: center;
 }
+
 #footer_div{
     flex-direction: column;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 #github_footer_anchor{
     text-decoration: none;
     color: #f1f1f1;
     font-size: var(--footer-font-size);
 }
+
 #github_footer_icon{
     width: 16px;
     margin: 0 0;
 }
+
 #email_footer_div{
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 #email_footer_icon{
     width: 16px;
     margin: 0 auto;
 }
+
 #email_footer_anchor{
     text-decoration: none;
     color: #f1f1f1;
@@ -267,17 +292,18 @@ footer{
     font-size: var(--footer-font-size);
 }
 
-
 #mark_footer_div{
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
 }
+
 #mark_footer_icon{
     height: 16px;
     margin: 0 auto;
 }
+
 p{
     color: #f1f1f1;
     margin: 0 auto;

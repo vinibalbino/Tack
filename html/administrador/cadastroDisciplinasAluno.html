@@ -19,31 +19,87 @@
   <link href="https://fonts.googleapis.com/css?family=Nunito:400,700|Quicksand:400,700" rel="stylesheet">
 </head>
 <body>
-
-
+  <header>
+      <div class="cabeçalhoEsquerda">
+        <a href="../../index.html" class="ancoraLogo"><img src="../../img/logo 256x256.png" class="logo" alt="Logo" /></a>
+        <div class="tituloDiv">
+          <h1 class="tituloH1">Tack</h1>
+        </div>
+      </div>
+      <div class="cabeçalhoDireita">
+        <a id="ancoraLogin" href="../../index.html">Login</a>
+      </div>
+  </header>
   <main>
     <form class="formularioDisciplina">
-      <div class="nomeDiv">
+      <div class="dadoDisciplinaDiv">
         <input type="text" id="nomeDisciplina" required autofocus/>
         <label for="nomeDisciplina">Disciplina</label>
       </div>
-      <div class="professorDiv">
+      <div class="dadoDisciplinaDiv">
         <input type="text" id="professorDisiplina" required />
         <label for="professorDisiplina">Professor</label>
       </div>
-      <div class="turmaDisciplina">
+      <div class="dadoDisciplinaDiv">
         <input type="text" id="turmaDisciplina" required />
         <label for="turmaDisciplina">Turma</label>
       </div>
-      <div>
+      <div class="botoesFormulario">
         <input type="button" value="Adicionar" onclick="" />
         <input type="reset" value="limpar" />  
       </div>
     </form>
+    <div id="paragrafoDisciplinasDiv">
+        <p id="paragrafoDisciplinas">Disciplinas:</p>
+    </div>
+    <div id="divDisciplinas">
+     
+      <ul id="listaDisciplinas">
+        <li>
+          <div class="dadosDisciplinas">
+            <h2>Linguagem de apresentação e estruturação de conteúdos II</h2>
+            <p>Professor: Rogerinho</p>
+            <p>Turma: 4ºD</p>
+          </div>
+          <input type="button" value="Remover" onclick="" />
+        </li>
+        <li>
+          <div class="dadosDisciplinas">
+            <h2>Linguagem de apresentação e estruturação de conteúdos II</h2>
+            <p>Professor: Rogerinho</p>
+            <p>Turma: 4ºD</p>
+          </div>
+          <input type="button" value="Remover" onclick="" />
+        </li>
+        <li>
+          <div class="dadosDisciplinas">
+            <h2>Linguagem de apresentação e estruturação de conteúdos II</h2>
+            <p>Professor: Rogerinho</p>
+            <p>Turma: 4ºD</p>
+          </div>
+          <input type="button" value="Remover" onclick="" />
+        </li>        
+      </ul>
+    </div>
 
-    <div id="root"></div>
-    
-    <input type="button" value="Concluir" onclick="" />
+    <input type="button" value="Concluir" onclick="" id="finalizar"/>
+  
+    <footer>
+        <div id="footer_div">
+          <div id="gitgub_footer_div">
+            <img src="../../img/white github 256x256.png" id="github_footer_icon" alt="" />
+            <a href="https://github.com/H3GON101/Tack"  target=”_blank” id="github_footer_anchor">GitHub Repository</a>
+          </div>
+          <div id="email_footer_div">
+            <img src="../../img/white email 256x256.png" id="email_footer_icon" alt="" />
+            <a href="mailto:tack.suporte@gmail.com?Subject=Tack" id="email_footer_anchor" target=”_blank”>Algum problema? tack.suporte@gmail.com</a>
+          </div>        
+          <div id="mark_footer_div">
+            <img src="../../img/white mark 256x256.png" id="mark_footer_icon" alt="" />
+            <p>Desenvolvido por Silva&Rodrigues.</p>
+          </div>
+        </div>
+      </footer>
   </main>
 
 
@@ -51,7 +107,7 @@
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
   <script src="../../js/plugins.js"></script>
-  <script src="cadastroDisciplinasAluno"></script>
+  <script src="../../js/administrador/cadastroDisciplinasAluno.js"></script>
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>

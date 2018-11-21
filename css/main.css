@@ -100,17 +100,22 @@ textarea {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    color: var(--white-color)
 }
+
 :root{
-    --default-aeration: 16px; 
-    --default-semi-aeration: 8px;
+    --default-aeration: 22px; 
+    --default-semi-aeration: 13px;
+
+    --footer-font-size: 12px;
+    --main-font-size: 16px;
 
     --primary-color: rgba(10, 100, 200, 1.0);
     --secundary-color: rgba(10, 200, 100,1.0);
-
-    --footer-font-size: 12px;
-
-    --placeholder-color: #bdc3c7;
+    --tertiary-color: rgba(255, 80, 80, 1.0);
+    --placeholder-color: rgba(189, 195, 199, 1.0);
+    --white-color: rgba(241, 241, 241, 1.0);
+    --black-color: rgba(52, 73, 94,1.0);
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -126,12 +131,10 @@ textarea {
     color:  var(--placeholder-color);
 }
 
-
 html, body, main{
     width: 100%;
     height: 100%;
     font-family: 'Nunito', 'Quicksand', sans-serif;
-    color: #f1f1f1;
 }
 #login{
     width: 100%;
@@ -149,13 +152,13 @@ html, body, main{
     flex-direction: column;
 }
 #logo{
-    box-shadow: 3px 15px 20px -7px rgba(52, 73, 94,0.50);  
+    box-shadow: 3px 15px 20px -7px var(--black-color);  
     max-width: 80px;
     max-height: 100px;
     margin: var(--default-semi-aeration);
 }
 #after_logo_title{
-    color: #f1f1f1;
+    color: var(--white-color);
     font-size: 24px;
     font-weight: 900;
     font-style: italic;
@@ -171,13 +174,12 @@ form{
 }
 
 
-
 #usuario_div{
     position: relative;
 }
 #usuario_div label{
     position: absolute;
-    left: var(--default-aeration);
+    left: var(--default-semi-aeration);
     top: 50%;
     transform: translateY(-50%);
 }
@@ -190,7 +192,7 @@ form{
 }
 #senha_div label{
     position: absolute;
-    left: var(--default-aeration);
+    left: var(--default-semi-aeration);
     top: 50%;
     transform: translateY(-50%);
 }
@@ -199,37 +201,35 @@ form{
 }
 
 input{
-    color: #f1f1f1;
+    color: var(--white-color);
     font-size: 16px;
-    padding: 5px  var(--default-semi-aeration) 5px  var(--default-semi-aeration);
+    padding: 5px 0px 5px  var(--default-semi-aeration);
     background-color:  rgba(0,0,0,0);
     border: none;
-    border-bottom: solid 1px #f1f1f1;
-    margin: var(--default-semi-aeration);
+    border-bottom: solid 1px var(--white-color);
+    margin: var(--default-semi-aeration) 0px var(--default-semi-aeration) 0px;
 }
 a{
-    padding-left: var(--default-semi-aeration);
-    color: #f1f1f1;
+    color: var(--white-color);
     text-decoration: none;
     font-size: 16px;
-    margin: var(--default-semi-aeration) var(--default-semi-aeration);
+    padding-left: var(--default-semi-aeration);
 }
 #entrar{
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #f1f1f1;
+    color: var(--white-color);
     box-shadow: 3px 15px 20px -7px rgba(52, 73, 94,0.50);  
     font-size: 16px;
     padding: 3px 1px 3px 1px;
     background-color:  var(--secundary-color);
     border-radius: 3px;
-    border: solid 1px #f1f1f1;
+    border: solid 1px var(--white-color);
     width: 195px;
 }
-
-.spamDiv{
-    color: #e67e22;
+#spamP{
+    color: var(--tertiary-color);
     font-size: 16px;
 }
 
