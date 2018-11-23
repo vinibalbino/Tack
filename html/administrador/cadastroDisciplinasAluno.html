@@ -27,7 +27,7 @@
         </div>
       </div>
       <div class="cabeçalhoDireita">
-        <a id="ancoraLogin" href="../../index.html">Login</a>
+        <a id="ancoraLogin">Login</a>
       </div>
   </header>
   <main>
@@ -37,7 +37,7 @@
         <label for="nomeDisciplina">Disciplina</label>
       </div>
       <div class="dadoDisciplinaDiv">
-        <input type="text" id="professorDisiplina" required />
+        <input type="text" id="professorDisciplina" required />
         <label for="professorDisiplina">Professor</label>
       </div>
       <div class="dadoDisciplinaDiv">
@@ -45,45 +45,29 @@
         <label for="turmaDisciplina">Turma</label>
       </div>
       <div class="botoesFormulario">
-        <input type="button" value="Adicionar" onclick="" />
+        <input type="button" value="Adicionar" onclick="displayUnidadesCurriculares()" />
         <input type="reset" value="limpar" />  
       </div>
     </form>
+    <p id="spamP" class="hidden">Campo(s) não preechidos!</p>
     <div id="paragrafoDisciplinasDiv">
         <p id="paragrafoDisciplinas">Disciplinas:</p>
     </div>
     <div id="divDisciplinas">
-     
       <ul id="listaDisciplinas">
         <li>
           <div class="dadosDisciplinas">
-            <h2>Linguagem de apresentação e estruturação de conteúdos II</h2>
-            <p>Professor: Rogerinho</p>
-            <p>Turma: 4ºD</p>
+            <h2>Matemática I(Apenas Exemplo)</h2>
+            <p>Professor: José Carlos de Almeida</p>
+            <p>Turma: 1ºD</p>
           </div>
-          <input type="button" value="Remover" onclick="" />
-        </li>
-        <li>
-          <div class="dadosDisciplinas">
-            <h2>Linguagem de apresentação e estruturação de conteúdos II</h2>
-            <p>Professor: Rogerinho</p>
-            <p>Turma: 4ºD</p>
-          </div>
-          <input type="button" value="Remover" onclick="" />
-        </li>
-        <li>
-          <div class="dadosDisciplinas">
-            <h2>Linguagem de apresentação e estruturação de conteúdos II</h2>
-            <p>Professor: Rogerinho</p>
-            <p>Turma: 4ºD</p>
-          </div>
-          <input type="button" value="Remover" onclick="" />
-        </li>        
+          <input id="removerExemplo" type="button" value="Remover" />
+        </li>       
       </ul>
     </div>
 
-    <input type="button" value="Concluir" onclick="" id="finalizar"/>
-  
+    <input type="button" value="Concluir" onclick="finalizar()" id="finalizar"/>
+    <p id="finalizarSpam" class="hidden">Nenhuma Unidade Curricular adicionada!</p>
     <footer>
         <div id="footer_div">
           <div id="gitgub_footer_div">
@@ -107,7 +91,10 @@
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
   <script src="../../js/plugins.js"></script>
-  <script src="../../js/administrador/cadastroDisciplinasAluno.js"></script>
+
+  <script src="../../js/banco.js"></script>
+  <script src="../../js/cadastroDisciplinas.js"></script>
+
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>

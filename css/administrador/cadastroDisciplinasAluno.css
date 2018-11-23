@@ -264,6 +264,14 @@ input[type="button"], input[type="reset"]{
     border-radius: 3px;
 }
 
+#spamP{
+    color: var(--tertiary-color);
+    font-size: 18px;
+}
+#finalizarSpam{
+    color: var(--tertiary-color);
+    font-size: 18px;
+}
 
 
 
@@ -295,13 +303,17 @@ input[type="button"], input[type="reset"]{
     border-radius: 3px; 
 }
 #listaDisciplinas li input[type="button"]{
-    margin-top: var(--default-semi-aeration);
+    margin-top: var(--default-semi-aeration);  
 }
 #listaDisciplinas li:last-child{
     margin-bottom: 0px;
 }
 #listaDisciplinas li h2{
     font-size: var(--main-font-size);
+}
+
+#removerExemplo{
+    color: var(--placeholder-color);
 }
 
 /* ========================================== */
