@@ -12,6 +12,20 @@ btn_login.addEventListener('click', function(){
     window.location.href = "../../index.html"
 });
 
+function validarRepeticao(x){
+    var h2Elements = document.querySelectorAll('h2');
+    var nomeDisciplinaAdi = x;
+    for(var i=0;i<h2Elements.length;i++){
+        h2Elements.forEach(function(){            
+            if(nomeDisciplinaAdi == h2Elements[i].innerText){               
+                return true;                
+            }
+            else{
+                return false;
+            }
+        });
+    }
+} 
 
 function displayUnidadesCurriculares(){
     var nomeDisciplina = document.querySelector("#nomeDisciplina").value;
@@ -54,7 +68,10 @@ function displayUnidadesCurriculares(){
             ul.appendChild(li);  
         }
         else {
-
+            document.getElementById("spamP2").className = "";
+            setTimeout(function(){
+            document.getElementById("spamP2").className = "hidden";
+            }, 1000);
         }    
     } 
     else{
@@ -91,17 +108,3 @@ function finalizar(){
     }
     bancoAluno.inserirUnidadeCurricular(unidadeCurricular);
 }
-
-function validarRepeticao(nomeDisciplina){
-    var h2Elements = document.querySelectorAll('h2');
-    for(var i=0;i<h2Elements.Count;i++){
-        h2Elements.forEach(function(){
-            if(nomeDisciplina == h2Elements.innerHTML){
-                return true;
-            }
-            else{
-                return false;
-            }
-        });
-    }
-} 
