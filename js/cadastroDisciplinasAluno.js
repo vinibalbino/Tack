@@ -19,7 +19,7 @@ function validarRepeticao(x){
     for(var i=0;i<h2Elements.length;i++){
         h2Elements.forEach(function(){            
             if(nomeDisciplinaAdi == h2Elements[i].innerText){ 
-                logica = true;                
+                logica = true;
             }
             else {
                 logica = false;
