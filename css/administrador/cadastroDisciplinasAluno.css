@@ -107,7 +107,8 @@ textarea {
 :root{
     --default-aeration: 22px; 
     --default-semi-aeration: 13px;
-
+    --default-aeration-icons-footer: 4px;
+    
     --footer-font-size: 12px;
     --main-font-size: 16px;
 
@@ -359,7 +360,7 @@ footer{
 
 #github_footer_icon{
     width: 16px;
-    margin: 0 0;
+    margin: 0 var(--default-aeration-icons-footer);
 }
 
 #email_footer_div{
@@ -370,7 +371,7 @@ footer{
 
 #email_footer_icon{
     width: 16px;
-    margin: 0 auto;
+    margin: 0 var(--default-aeration-icons-footer);
 }
 
 #email_footer_anchor{
@@ -389,7 +390,7 @@ footer{
 
 #mark_footer_icon{
     height: 16px;
-    margin: 0 auto;
+    margin: 0 var(--default-aeration-icons-footer);
 }
 
 p{
