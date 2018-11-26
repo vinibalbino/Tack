@@ -1,0 +1,102 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Tack</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="manifest" href="../../manifest.json">
+  <link rel="apple-touch-icon" href="../../icon.png">
+
+  <link rel="icon" href="../../favicon.png">
+
+  <link rel="stylesheet" href="../../css/normalize.css">
+  <link rel="stylesheet" href="../../css/administrador/cadastroDisciplinasProfessor.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,700|Quicksand:400,700" rel="stylesheet">
+</head>
+<body>
+  <header>
+      <div class="cabeçalhoEsquerda">
+        <a href="../../index.html" class="ancoraLogo"><img src="../../img/logo.png" class="logo" alt="Logo" /></a>
+        <div class="tituloDiv">
+          <h1 class="tituloH1">Tack</h1>
+        </div>
+      </div>
+      <div class="cabeçalhoDireita">
+        <a id="ancoraLoginProfessor">Login</a>
+      </div>
+  </header>
+  <main>
+    <form class="formularioDisciplina">
+      <div class="dadoDisciplinaDiv">
+        <input type="text" id="nomeDisciplinaProfessor" required autofocus/>
+        <label for="nomeDisciplinaProfessor">Disciplina</label>
+      </div>
+      <div class="dadoDisciplinaDiv">
+        <input type="text" id="turmaDisciplinaProfessor" required />
+        <label for="turmaDisciplinaProfessor">Turma</label>
+      </div>
+      <div class="botoesFormulario">
+        <input type="button" value="Adicionar" onclick="displayUnidadesCurricularesProfessor()" />
+        <input type="reset" value="Limpar" />  
+      </div>
+    </form>
+    <p id="spamP"></p>
+    <div id="paragrafoDisciplinasDiv">
+        <p id="paragrafoDisciplinas">Disciplinas:</p>
+    </div>
+    <div id="divDisciplinas">
+      <ul id="listaDisciplinasProfessor">
+        <li>
+          <div class="dadosDisciplinas">
+            <h2>Matemática I(Apenas Exemplo)</h2>
+            <p>Turma: 1ºD</p>
+          </div>
+          <input id="removerExemplo" type="button" value="Remover" />
+        </li>       
+      </ul>
+    </div>
+
+    <input type="button" value="Concluir" onclick="finalizar()" id="finalizarProfessor"/>
+    <p id="finalizarSpamProfessor" class="hidden">Nenhuma Unidade Curricular adicionada!</p>
+    <footer>
+        <div id="footer_div">
+          <div id="gitgub_footer_div">
+            <img src="../../img/github.png" id="github_footer_icon" alt="" />
+            <a href="https://github.com/H3GON101/Tack"  target=”_blank” id="github_footer_anchor">GitHub Repository</a>
+          </div>
+          <div id="email_footer_div">
+            <img src="../../img/email.png" id="email_footer_icon" alt="" />
+            <a href="mailto:tack.suporte@gmail.com?Subject=Tack" id="email_footer_anchor" target=”_blank”>Algum problema? tack.suporte@gmail.com</a>
+          </div>        
+          <div id="mark_footer_div">
+            <img src="../../img/mark.png" id="mark_footer_icon" alt="" />
+            <p>Desenvolvido por Silva&Rodrigues.</p>
+          </div>
+        </div>
+      </footer>
+  </main>
+
+
+  <script src="../../js/vendor/modernizr-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+  <script src="../../js/plugins.js"></script>
+
+  <script src="../../js/banco.js"></script>
+  <script src="../../js/cadastroDisciplinasProfessor.js"></script>
+
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+</body>
+
+</html>
