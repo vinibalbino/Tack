@@ -15,16 +15,18 @@ btn_login.addEventListener('click', function(){
 function validarRepeticao(x){
     var h2Elements = document.querySelectorAll('h2');
     var nomeDisciplinaAdi = x;
+    var logica = true;
     for(var i=0;i<h2Elements.length;i++){
         h2Elements.forEach(function(){            
-            if(nomeDisciplinaAdi == h2Elements[i].innerText){               
-                return true;                
+            if(nomeDisciplinaAdi == h2Elements[i].innerText){ 
+                logica = true;                
             }
-            else{
-                return false;
+            else {
+                logica = false;
             }
         });
     }
+    return logica;
 } 
 
 function displayUnidadesCurriculares(){
@@ -33,7 +35,9 @@ function displayUnidadesCurriculares(){
     var turma = document.querySelector("#turmaDisciplina").value;
     var ul = document.querySelector("#listaDisciplinas");
     if(nomeDisciplina != "" && professor!= "" && turma != ""){
-        if(validarRepeticao(nomeDisciplina) == false){      
+        var logica = validarRepeticao(nomeDisciplina);
+        console.log(logica)
+        if( logica == false){      
             var h2 = document.createElement("h2");
             var nodeH2 = document.createTextNode(nomeDisciplina);
             h2.appendChild(nodeH2);
