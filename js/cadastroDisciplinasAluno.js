@@ -34,9 +34,14 @@ function displayUnidadesCurriculares(){
     var professor = document.querySelector("#professorDisciplina").value;
     var turma = document.querySelector("#turmaDisciplina").value;
     var ul = document.querySelector("#listaDisciplinas");
+    
+    document.getElementById("nomeDisciplina").focus();
+    document.querySelector("#nomeDisciplina").value = "";
+    document.querySelector("#professorDisciplina").value = "";
+    document.querySelector("#turmaDisciplina").value = "";
+
     if(nomeDisciplina != "" && professor!= "" && turma != ""){
         var logica = validarRepeticao(nomeDisciplina);
-        console.log(logica)
         if( logica == false){      
             var h2 = document.createElement("h2");
             var nodeH2 = document.createTextNode(nomeDisciplina);

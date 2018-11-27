@@ -59,7 +59,8 @@ class Banco{
 		localStorage.setItem(this.nome_banco,  JSON.stringify(this.dados));
 	}
 	inserirUnidadeCurricular(vetorString){
-		for(var i=this.dados.length-1; i > 0;i-=1)
+		
+		for(var i=this.dados.length-1; i >= 0;i-=1)
 		{
 			if(this.dados[i].situacao == "incompleto" && this.ultimoCadastroValido == true)
 			{
@@ -69,6 +70,9 @@ class Banco{
 			}
 		}
 		this.atualizar();
+		removerCadastroAluno()
+		window.location.href = "../../index.html";
+
 	}
 }
 
