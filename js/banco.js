@@ -3,6 +3,7 @@ class Banco{
 	{
 		this.nome_banco = nome;
 		this.dados = JSON.parse(localStorage.getItem(this.nome_banco)) || [];
+
 		this.dadosTemp = new Array();
 		this.ultimoCadastroValido = true;
 	}
@@ -15,7 +16,7 @@ class Banco{
 		this.dados.push(obj);
 		localStorage.setItem(this.nome_banco,  JSON.stringify(this.dados));
 	}
-	buscar(user,senha)
+	buscar(user, senha)
 	{
 		for(var i=0;i<this.dados.length;i++)
 		{
@@ -72,7 +73,15 @@ class Banco{
 		this.atualizar();
 		removerCadastroAluno()
 		window.location.href = "../../index.html";
-
+	}
+	usuarioLogado(user, senha){
+		for(var i=0;i<this.dados.length;i++)
+		{
+			if(this.dados[i].usu == user && this.dados[i].senha == senha)
+			{
+				return this.dados[i].usu;
+			}
+		}
 	}
 }
 
@@ -97,6 +106,12 @@ class Professor {
 		this.email = email;
 		this.situacao = situacao;
 		this.unidadesCurriculares = unidadesCurriculares;
+	}
+}
+
+class Suporte {
+	constructor(id){
+		this.id = id;
 	}
 }
 
