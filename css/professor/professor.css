@@ -96,89 +96,357 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-    /*font-family: 'Quicksand', sans-serif;*/
-    /*font-family: 'Nunito', sans-serif;*/
+*{
+    margin: 0px;
+    padding:  0px;
+    box-sizing: border-box;
+    color: var(--white-color)
+}
+
+:root{
+    --default-aeration: 22px; 
+    --default-semi-aeration: 13px;
+    --default-aeration-icons-footer: 4px;
+    
+    --footer-font-size: 12px;
+    --main-font-size: 16px;
+
+    --primary-color: rgba(10, 100, 200, 1.0);
+    --secundary-color: rgba(10, 200, 100,1.0);
+    --tertiary-color: rgba(255, 80, 80, 1.0);
+    --placeholder-color: rgba(189, 195, 199, 1.0);
+    --white-color: rgba(241, 241, 241, 1.0);
+    --black-color: rgba(52, 73, 94,0.80);
+}
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: rgba(225, 225, 225, 1);
+    color: var(--placeholder-color);
     opacity: 1; /* Firefox */
 }
 
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: rgba(250, 250, 250, 1);
+    color:  var(--placeholder-color);
 }
 
 ::-ms-input-placeholder { /* Microsoft Edge */
-    color: black;
+    color:  var(--placeholder-color);
 }
 
+html, body{
+    width: 100%;
+    height: 100%;
+    font-family: 'Nunito', 'Quicksand', sans-serif;
+    background: linear-gradient( 45deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%),
+                linear-gradient( 45deg, var(--primary-color) 0%, var(--primary-color) 100%);
+    background-attachment: fixed;
+}
 
-html, body, main{
-    width: 100%;
-    height: 100%;
-    /*font-family: 'Quicksand', sans-serif;*/
-    font-family: 'Nunito', sans-serif;
-    color: white;
+body{
+    position: relative;
 }
-#login{
-    width: 100%;
-    height: 100%;
+
+/* ========================================== */
+
+header{
+    padding: var(--default-aeration) 0px var(--default-semi-aeration) 0px;
+}
+
+.top_header{
     display: flex;
-    flex-direction: column;
+    padding: 0px var(--default-aeration);
+}
+
+.left_top_header{
     align-items: center;
-    justify-content: center;
-    background:
-    linear-gradient( 45deg, rgba(10,100,200,1) 0%, rgba(10,100,200,0.5) 100%),
-    linear-gradient( 45deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,1) 100%);
-}
-#login_header{
-  display: flex;
-  flex-direction: column;
-}
-#logo{
-    max-width: 100px;
-    max-height: 80px;
-    margin: 5px;
-}
-h1{
-    font-size: 32px;
-    margin: 5px;
     display: flex;
-    align-items: center;
-}
-form{
-    display: flex;
-    flex-direction: column;
+    flex: 1;
     justify-content: flex-start;
 }
+
+#logo_anchor{
+    margin-right: var(--default-semi-aeration);
+    box-shadow: 3px 15px 20px -7px rgba(52, 73, 94,0.50);   
+}
+
+#logo{
+    width: 35px;
+    height: auto;
+}
+
+#title_div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.after_logo_title{
+    padding: 0px;
+    color: #f1f1f1;
+    font-size: 24px;
+    letter-spacing: -3px;
+    justify-content: center;
+    font-weight: 900;
+    font-style: italic;
+}
+
+.right_top_header{
+    align-items: center;
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+#user_icon{
+    height: 35px;   
+}
+
+.bottom_header nav ul{
+    list-style-type: none;
+    display: flex;
+}
+
+.bottom_header nav ul li{
+    background-color: rgba(0, 0, 0, 0.1);
+    align-items: center;
+    border-right: solid 2px #f1f1f1;
+    display: flex;
+    flex: 3;
+    justify-content: center;
+    height: 50px; 
+}
+
+.bottom_header nav ul li:last-child{
+    border-right: none;
+}
+
+.bottom_header nav ul li a{
+    width: 100%;  
+    height: 100%;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#bottom_header_home{
+
+    height: auto;
+    width: 25px; 
+}
+
+#bottom_header_note{
+    height: 25px; 
+    width: auto;   
+}
+
+#bottom_header_calendar{
+    height: 25px; 
+    width: auto;
+}
+
+#bottom_header_more{
+    height: auto;
+    width: 25px;
+}
+
+/* ========================================== */
+
 input{
-    color: white;
+    color: var(--white-color);
     font-size: 16px;
-    padding: 1px 1px 5px 1px;
+    padding: 5px 0px 5px  var(--default-semi-aeration);
     background-color:  rgba(0,0,0,0);
     border: none;
-    border-bottom: solid 1px white;
-    margin: 10px 10px;
+    border-bottom: solid 1px var(--white-color);
+    margin: var(--default-semi-aeration) 0px var(--default-semi-aeration) 0px;
 }
-a{
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    margin: 10px 10px;
-}
-#entrar{
-    color: white;
-    box-shadow: 3px 3px rgba(0, 0, 0, 0.1);
+input[type="button"]{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white-color);
+    box-shadow: 3px 15px 20px -7px rgba(52, 73, 94,0.50);  
     font-size: 16px;
     padding: 3px 1px 3px 1px;
-    background-color:  rgba(10,200,100, 0.85);
+    background-color:  var(--secundary-color);
     border-radius: 3px;
-    border: solid 1px white;
-    margin: 10px 10px;
-    width: 189.188px;
+    border: solid 1px var(--white-color);
+    width: 195px;
+}
+/* ========================================== */
+
+main{
+    padding-top: 10px;
+    padding-bottom: 80px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+#root{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ========================================== */
+
+#homeSection{
+
+}
+#adicaoAtividades{
+
+}
+#tituloDiv{
+    position: relative;
+}
+#tituloDiv label{
+    position: absolute;
+    left: var(--default-semi-aeration);
+    top: 50%;
+    transform: translateY(-50%);
+}
+#tituloDiv input[type="text"]:valid ~ label{
+    display: none;
+}
+textarea{
+    border: solid 2px var(--white-color);
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0);
+}
+select{
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--white-color);
 }
 
 
+
+
+
+/* ========================================== */
+
+#unidadesCurricularesSection{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+#unidadesCurricularesList{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#unidadesCurricularesList li{
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid var(--white-color) 2px;
+    margin: 0px 0px var(--default-semi-aeration) 0px;
+    width: 80%;
+    height: 100%;
+}
+
+#unidadesCurricularesList li p:first-child{
+    flex: 2;
+}
+
+#unidadesCurricularesList li p{
+    border-bottom: 2px solid var(--white-color);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    font-size: 12px;
+    padding: 5px;
+}
+#unidadesCurricularesList li p:last-child{
+    border-bottom: none;
+}
+
+
+/* ========================================== */
+
+footer{
+    position: absolute;
+    bottom: 0;
+    position: fixed;
+    background-color: var(--black-color);
+    width: 100%;
+    height: 80px;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#footer_div{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#github_footer_anchor{
+    text-decoration: none;
+    color: #f1f1f1;
+    font-size: var(--footer-font-size);
+}
+
+#github_footer_icon{
+    width: 16px;
+    margin: 0 var(--default-aeration-icons-footer);
+}
+
+#email_footer_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#email_footer_icon{
+    width: 16px;
+    margin: 0 var(--default-aeration-icons-footer);
+}
+
+#email_footer_anchor{
+    text-decoration: none;
+    color: #f1f1f1;
+    margin: 0 auto;
+    font-size: var(--footer-font-size);
+}
+
+#mark_footer_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+#mark_footer_icon{
+    height: 16px;
+    margin: 0 var(--default-aeration-icons-footer);
+}
+
+p{
+    color: #f1f1f1;
+    margin: 0 auto;
+    font-size: var(--footer-font-size);
+}
+
+/* ==========================================================================
+    Self-Help
+   ========================================================================== */
+
+/* Exemplo de como implementar variável; 
+:root{
+    --minha-variavel-css: 100px;
+} */
 
 /* ==========================================================================
    Helper classes

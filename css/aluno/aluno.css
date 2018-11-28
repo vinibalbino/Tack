@@ -116,7 +116,7 @@ textarea {
     --tertiary-color: rgba(255, 80, 80, 1.0);
     --placeholder-color: rgba(189, 195, 199, 1.0);
     --white-color: rgba(241, 241, 241, 1.0);
-    --black-color: rgba(52, 73, 94,1.0);
+    --black-color: rgba(52, 73, 94,0.80);
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */

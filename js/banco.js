@@ -26,6 +26,8 @@ class Banco{
 				var bancoSuporte = new Suporte(id);
 				if(localStorage.getItem("Suporte")){
 					bancoSuporte = JSON.parse(localStorage.getItem("Suporte"));
+					bancoSuporte.id = id;
+					localStorage.setItem("Suporte", JSON.stringify(bancoSuporte)); 
 				}
 				else{
 					localStorage.setItem("Suporte", JSON.stringify(bancoSuporte)); 
