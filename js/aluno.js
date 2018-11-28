@@ -5,11 +5,15 @@ class PaginaAluno{
     }
     displayUdadesCurriculares(){
         this.vetorAluno = bancoAluno.listar();
+        alert(JSON.stringify(this.vetorAluno));
+
         for(var i=0;i<this.vetorAluno.length;i++){
 			if(this.vetorAluno[i].usu == bancoSuporte.id){
+                alert(this.vetorAluno+"VEM");
                 this.uc = this.vetorAluno[i].unidadesCurriculares;
 			}
         }
+        alert(this.uc);
         mostrarUnidadesCurriculares(this.uc);
     }
 }
@@ -21,35 +25,24 @@ var paginaAluno = new PaginaAluno();
 
 var btnHome = document.querySelector("#homeAnchor");
 var btnUnidadesCurriculares = document.querySelector("#unidadesCurricularesAnchor");
-var btnCalendario = document.querySelector("#calendarioAnchor");
 var btnMais = document.querySelector("#maisAnchor");
 
 btnHome.addEventListener("click", function(){
     document.querySelector("#homeSection").className = "";
     document.querySelector("#unidadesCurricularesSection").className = "hidden";
-    document.querySelector("#calendarioSection").className = "hidden";
     document.querySelector("#maisSection").className = "hidden";
 });
 
 btnUnidadesCurriculares.addEventListener("click", function(){
     document.querySelector("#homeSection").className = "hidden";
     document.querySelector("#unidadesCurricularesSection").className = "";
-    document.querySelector("#calendarioSection").className = "hidden";
     document.querySelector("#maisSection").className = "hidden";
     paginaAluno.displayUdadesCurriculares();
-});
-
-btnCalendario.addEventListener("click", function(){
-    document.querySelector("#homeSection").className = "hidden";
-    document.querySelector("#unidadesCurricularesSection").className = "hidden";
-    document.querySelector("#calendarioSection").className = "";
-    document.querySelector("#maisSection").className = "hidden";
 });
 
 btnMais.addEventListener("click", function(){
     document.querySelector("#homeSection").className = "hidden";
     document.querySelector("#unidadesCurricularesSection").className = "hidden";
-    document.querySelector("#calendarioSection").className = "hidden";
     document.querySelector("#maisSection").className = "";
 });
 
