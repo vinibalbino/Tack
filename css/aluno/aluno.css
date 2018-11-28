@@ -96,24 +96,27 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-   *{
+*{
     margin: 0px;
-    padding: 0px;
+    padding:  0px;
     box-sizing: border-box;
-    color: #f1f1f1;
+    color: var(--white-color)
 }
 
 :root{
     --default-aeration: 22px; 
     --default-semi-aeration: 13px;
     --default-aeration-icons-footer: 4px;
-
+    
     --footer-font-size: 12px;
+    --main-font-size: 16px;
 
     --primary-color: rgba(10, 100, 200, 1.0);
     --secundary-color: rgba(10, 200, 100,1.0);
-    --placeholder-color: #bdc3c7;
-    --white-color: #f1f1f1;
+    --tertiary-color: rgba(255, 80, 80, 1.0);
+    --placeholder-color: rgba(189, 195, 199, 1.0);
+    --white-color: rgba(241, 241, 241, 1.0);
+    --black-color: rgba(52, 73, 94,1.0);
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -142,8 +145,10 @@ body{
     position: relative;
 }
 
+/* ========================================== */
+
 header{
-    padding: var(--default-aeration) 0px;
+    padding: var(--default-aeration) 0px var(--default-semi-aeration) 0px;
 }
 
 .top_header{
@@ -207,6 +212,7 @@ header{
     display: flex;
     flex: 3;
     justify-content: center;
+    height: 50px; 
 }
 
 .bottom_header nav ul li:last-child{
@@ -214,7 +220,11 @@ header{
 }
 
 .bottom_header nav ul li a{
-    padding: var(--default-aeration);
+    width: 100%;  
+    height: 100%;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #bottom_header_home{
@@ -238,23 +248,80 @@ header{
     width: 25px;
 }
 
+/* ========================================== */
 
 main{
-    padding-top: 100px;
+    padding-top: 10px;
     padding-bottom: 80px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+#root{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+#unidadesCurricularesSection{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+#unidadesCurricularesList{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#unidadesCurricularesList li{
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid var(--white-color) 2px;
+    margin: 0px 0px var(--default-semi-aeration) 0px;
+    width: 80%;
+    height: 100%;
+}
+
+#unidadesCurricularesList li p:first-child{
+    flex: 2;
+}
+
+#unidadesCurricularesList li p{
+    border-bottom: 2px solid var(--white-color);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    font-size: 12px;
+    padding: 5px;
+}
+#unidadesCurricularesList li p:last-child{
+    border-bottom: none;
 }
 
 
+/* ========================================== */
+
 footer{
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.2);
     bottom: 0;
+    position: fixed;
+    background-color: var(--black-color);
     width: 100%;
     height: 80px;
     flex-direction: column;
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 
 #footer_div{

@@ -22,6 +22,14 @@ class Banco{
 		{
 			if(this.dados[i].usu == user && this.dados[i].senha == senha)
 			{
+				var id = this.dados[i].usu;
+				var bancoSuporte = new Suporte(id);
+				if(localStorage.getItem("Suporte")){
+					bancoSuporte = JSON.parse(localStorage.getItem("Suporte"));
+				}
+				else{
+					localStorage.setItem("Suporte", JSON.stringify(bancoSuporte)); 
+				}
 				return true;
 			}
 		}
@@ -73,15 +81,6 @@ class Banco{
 		this.atualizar();
 		removerCadastroAluno()
 		window.location.href = "../../index.html";
-	}
-	usuarioLogado(user, senha){
-		for(var i=0;i<this.dados.length;i++)
-		{
-			if(this.dados[i].usu == user && this.dados[i].senha == senha)
-			{
-				return this.dados[i].usu;
-			}
-		}
 	}
 }
 

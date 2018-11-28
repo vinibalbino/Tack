@@ -7,16 +7,6 @@ var btn_entrar = document.querySelector("#entrar");
 btn_entrar.addEventListener('click', function(){//Função de login;
   var nome_login = document.getElementById("login_usuario").value;
   var senha_login = document.getElementById("login_senha").value;
-
-  var id = bancoAluno.usuarioLogado(nome_login,senha_login);
-  var bancoSuporte = new Suporte(id);
-
-  if(localStorage.getItem("Suporte")){
-    bancoSuporte = JSON.parse(localStorage.getItem("Suporte"));
-  }
-  else{
-    localStorage.setItem("Suporte", JSON.stringify(bancoSuporte)); 
-  }
   
   removerCadastroAluno();
   removerCadastroProfessor();

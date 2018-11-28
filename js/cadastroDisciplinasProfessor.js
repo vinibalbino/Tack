@@ -74,8 +74,8 @@ function removerDisplayUnidadeCurricular(x){
 }
 
 function finalizarProfessor(){
-    var ulCont = document.getElementById("listaDisciplinas").childElementCount;
-    ul = document.getElementById("listaDisciplinas");
+    var ulCont = document.getElementById("listaDisciplinasProfessor").childElementCount;
+    var ul = document.getElementById("listaDisciplinasProfessor");
     if(ulCont == 1){
         document.getElementById("finalizarSpamProfessor").className = "";
         setTimeout(function(){
@@ -84,13 +84,12 @@ function finalizarProfessor(){
     }
     else{
         for(i=1; i < ul.childElementCount; i+=1){
-            vetorUnidadesCurriculares[i] = new Array(3);
-            vetorUnidadesCurriculares[i][0] = ul.children[i].children[0].children[0].textContent;
-            vetorUnidadesCurriculares[i][1] = ul.children[i].children[0].children[1].textContent;
-            vetorUnidadesCurriculares[i][2] = ul.children[i].children[0].children[2].textContent;
+            vetorUnidadesCurricularesLecionadas[i] = new Array(2);
+            vetorUnidadesCurricularesLecionadas[i][0] = ul.children[i].children[0].children[0].textContent;
+            vetorUnidadesCurricularesLecionadas[i][1] = ul.children[i].children[0].children[1].textContent;
         }
-        vetorUnidadesCurriculares = vetorUnidadesCurriculares.slice(1,ul.childElementCount);
-        unidadeCurricular = JSON.stringify(vetorUnidadesCurriculares);
+        vetorUnidadesCurricularesLecionadas = vetorUnidadesCurricularesLecionadas.slice(1,ul.childElementCount);
+        unidadeCurricular = JSON.stringify(vetorUnidadesCurricularesLecionadas);
     }
     bancoProfessor.inserirUnidadeCurricular(unidadeCurricular);
 }
