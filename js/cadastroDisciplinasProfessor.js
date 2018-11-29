@@ -17,10 +17,9 @@ function displayUnidadesCurricularesProfessor(){
     var turma = document.querySelector("#turmaDisciplinaProfessor").value;
     var ul = document.querySelector("#listaDisciplinasProfessor");
 
-    document.getElementById("nomeDisciplina").focus();
-    document.querySelector("#nomeDisciplina").value = "";
-    document.querySelector("#professorDisciplina").value = "";
-    document.querySelector("#turmaDisciplina").value = "";
+    document.getElementById("nomeDisciplinaProfessor").focus();
+    document.querySelector("#nomeDisciplinaProfessor").value = "";
+    document.querySelector("#turmaDisciplinaProfessor").value = "";
 
     if(nomeDisciplina != "" && turma != ""){     
             var h2 = document.createElement("h2");
