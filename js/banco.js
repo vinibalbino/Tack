@@ -92,6 +92,19 @@ class Banco{
 			}
 		}
 	}
+	getUnidadesCurricularesUser(user)
+	{
+		for(var i=0;i<this.dados.length;i++)
+		{
+			if(this.dados[i].usu == user)
+			{
+				return this.dados[i].unidadesCurriculares;
+			}
+		}
+		return "Deu Errado meu!";
+	}
+
+
 }
 
 class Aluno {
@@ -124,11 +137,11 @@ class Suporte {
 	}
 }
 class BancoAtividades{
-	constructor(){
-		this.id;
-		this.titulo;
-		this.data;
-		this.descricao;
+	constructor(id, titulo, data, descricao){
+		this.id = id;
+		this.titulo = titulo;
+		this.data = data;
+		this.descricao = descricao;
 	}
 }
 
