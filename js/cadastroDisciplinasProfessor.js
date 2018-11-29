@@ -12,25 +12,15 @@ btn_login.addEventListener('click', function(){
     window.location.href = "../../index.html"
 });
 
-function validarRepeticao(x){
-    var h2Elements = document.querySelectorAll('h2');
-    var nomeDisciplinaAdi = x;
-    for(var i=0;i<h2Elements.length;i++){
-        h2Elements.forEach(function(){            
-            if(nomeDisciplinaAdi == h2Elements[i].innerText){               
-                return true;                
-            }
-            else{
-                return false;
-            }
-        });
-    }
-} 
-
 function displayUnidadesCurricularesProfessor(){
     var nomeDisciplina = document.querySelector("#nomeDisciplinaProfessor").value;
     var turma = document.querySelector("#turmaDisciplinaProfessor").value;
     var ul = document.querySelector("#listaDisciplinasProfessor");
+
+    document.getElementById("nomeDisciplinaProfessor").focus();
+    document.querySelector("#nomeDisciplinaProfessor").value = "";
+    document.querySelector("#turmaDisciplinaProfessor").value = "";
+
     if(nomeDisciplina != "" && turma != ""){     
             var h2 = document.createElement("h2");
             var nodeH2 = document.createTextNode(nomeDisciplina);
