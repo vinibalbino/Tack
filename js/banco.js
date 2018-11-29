@@ -84,6 +84,14 @@ class Banco{
 		removerCadastroAluno()
 		window.location.href = "../../index.html";
 	}
+	selectedOption(){
+		let disciplina = document.getElementById("unidadeCurricularesSelect");
+		for(let i = 0; i < disciplina.options.length; i+=1){
+			if(disciplina[i].selected == true){
+				return (disciplina[i]);
+			}
+		}
+	}
 }
 
 class Aluno {

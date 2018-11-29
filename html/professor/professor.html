@@ -50,22 +50,22 @@
           <form>
               <div id="tituloDiv">
                 <input type="text" class=""  id="tituloInput" autofocus required/>
-                <label for="tituloInput">Título da atividade</label>
+                <label for="tituloInput">Atividade</label>
               </div>
               <div id="dataEntregaDiv">
                   <input type="date" class=""  id="dataEntregaInput" required/>
               </div>
               <div id="descricaoDiv">
-                  <p>Descrição:</p>
-                  <textarea id="" cols="30" rows="10"></textarea>
+                  <textarea id="descricaoTextarea" cols="30" rows="10" required></textarea>
+                  <label for="descricaoTextarea">Descrição:</label>
               </div>
               <div id="unidadeCurricularDiv">
-                <select>
+                <select id="unidadeCurricularesSelect">
                   <option value="">Selecione uma opção</option>
                 </select>
               </div>
           </form>
-          <div>
+          <div id="adicionarDiv">
               <input type="button" value="Adicionar" onclick=""/>
           </div>
          

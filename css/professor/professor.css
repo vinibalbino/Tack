@@ -257,7 +257,7 @@ input{
     background-color:  rgba(0,0,0,0);
     border: none;
     border-bottom: solid 1px var(--white-color);
-    margin: var(--default-semi-aeration) 0px var(--default-semi-aeration) 0px;
+    margin: 0px 0px var(--default-semi-aeration) 0px;
 }
 input[type="button"]{
     display: flex;
@@ -299,24 +299,61 @@ main{
 }
 #tituloDiv{
     position: relative;
+    margin: 0px
+}
+#tituloDiv input{
+    width: 100%;
 }
 #tituloDiv label{
     position: absolute;
     left: var(--default-semi-aeration);
-    top: 50%;
+    top: 35%;
     transform: translateY(-50%);
 }
 #tituloDiv input[type="text"]:valid ~ label{
     display: none;
 }
+
+#dataEntregaDiv{
+    margin: 0px
+}
+#dataEntregaDiv input[type="date"]{
+    width: 100%;
+}
+#descricaoDiv{
+    position: relative;
+    margin-bottom: var(--default-semi-aeration);
+    font-size: 16px;
+}
+#descricaoDiv label{
+    position: absolute;
+    left: var(--default-semi-aeration);
+    top: 10%;
+    transform: translateY(-50%);
+}
 textarea{
-    border: solid 2px var(--white-color);
+    padding: var(--default-semi-aeration) var(--default-semi-aeration) var(--default-semi-aeration) var(--default-semi-aeration);
+    border: solid 1px var(--white-color);
     border-radius: 3px;
     background-color: rgba(0, 0, 0, 0);
 }
-select{
-    background-color: rgba(0, 0, 0, 0);
+#descricaoTextarea:valid ~ label{
+    display: none;
+}
+#unidadeCurricularesSelect{
+    width: 100%;
+    background-color: var(--black-color);
     color: var(--white-color);
+    border: solid 1px var(--white-color);
+    border-radius: 3px;
+    margin-bottom: var(--default-semi-aeration); 
+}
+
+#adicionarDiv{
+    width: 100%;
+}
+#adicionarDiv input[type="button"]{
+    width: 100%;
 }
 
 

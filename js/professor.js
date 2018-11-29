@@ -12,6 +12,15 @@ class PaginaProfessor{
         }
         mostrarUnidadesCurriculares(this.uc);
     }
+    displayHome(){
+        this.vetorProfessor= bancoProfessor.listar();
+        for(let i=0;i<this.vetorProfessor.length;i++){
+			if(this.vetorProfessor[i].usu == bancoSuporte.id){
+                this.uc = this.vetorProfessor[i].unidadesCurriculares;
+			}
+        }
+        displayHome(this.uc);
+    }
 }
 
 
@@ -26,10 +35,13 @@ var btnHome = document.querySelector("#homeAnchor");
 var btnUnidadesCurriculares = document.querySelector("#unidadesCurricularesAnchor");
 var btnMais = document.querySelector("#maisAnchor");
 
+paginaProfessor.displayHome();
+
 btnHome.addEventListener("click", function(){
     document.querySelector("#homeSection").className = "";
     document.querySelector("#unidadesCurricularesSection").className = "hidden";
     document.querySelector("#maisSection").className = "hidden";
+    paginaProfessor.displayHome();
 });
 
 btnUnidadesCurriculares.addEventListener("click", function(){
@@ -67,4 +79,27 @@ function mostrarUnidadesCurriculares(unidadesCurriculares){
         li.appendChild(p2);
         ul.appendChild(li);
     }
+}
+function displayHome(unidadesCurriculares){
+    var select = document.querySelector("#unidadeCurricularesSelect")
+    while (select.firstChild) {
+        select.removeChild(select.firstChild);
+    }
+    var option = document.createElement("option");
+    var textNode = document.createTextNode("Selecione uma Disciplina");
+    option.appendChild(textNode);
+    option.value = "";
+    option.selected - true;
+    select.appendChild(option);
+    for(let i = 0; i < unidadesCurriculares.length; i += 1){
+        var option = document.createElement("option");
+        var textNode = document.createTextNode(unidadesCurriculares[i][0]);
+        option.appendChild(textNode);
+        option.value = unidadesCurriculares[i][0];
+        select.appendChild(option);
+    }
+}
+
+function adicionarAtividade(){
+    var opcaoSelecionada = bancoProfessor.selectedOption()
 }
