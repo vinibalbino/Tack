@@ -34,7 +34,7 @@
           <button onclick="dropDown()" class="dropbtn"><img src="../../img/user.png" id="user_icon" alt="Icone de usuário"></button>
           <div id="dropDownUser" class="contentDropDown">
             <a id="btnSair">Sair</a>
-            <a id="editarUsu">Editar</a>
+            <a id="usuarioEdit">Editar</a>
           </div>
         </div>
       </div>
@@ -51,7 +51,7 @@
   </header>
   <main>
     <div id="root">
-      <section id="homeSection" class="">
+      <section id="homeSection" class="hidden">
         <div id="adicaoAtividades">
           <form>
               <div id="tituloDiv">
@@ -82,6 +82,25 @@
       </section>
       <section id="unidadesCurricularesSection" class="hidden"><ul id="unidadesCurricularesList"></ul></section>
       <section id="maisSection" class="hidden"></section>
+      <section id="editarUsu">
+        <div class="dadoDisciplinaDiv">
+          <input type="text" id="usuEdit" required autofocus/>
+          <label for="usuEdit">Usúario</label>
+        </div>
+        <div class="dadoDisciplinaDiv">
+          <input type="password" id="senhaAtual" required autofocus/>
+          <label for="senhaAtual">Senha Atual</label>
+        </div>
+        <div class="dadoDisciplinaDiv">
+          <input type="password" id="senhaEdit" required autofocus/>
+          <label for="senhaEdit">Usúario</label>
+        </div>
+        <div class="dadoDisciplinaDiv">
+          <input type="text" id="senhaEditConfirm" required autofocus/>
+          <label for="senhaEditConfirm">Usúario</label>
+        </div>
+        
+      </section>
     </div>
   </main>
   <footer>
