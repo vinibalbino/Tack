@@ -43,7 +43,22 @@ btnMais.addEventListener("click", function(){
     document.querySelector("#maisSection").className = "";
 });
 
+function dropDown() {
+    document.getElementById("dropDownUser").classList.toggle("dropDownVisivel");
+}
 
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("contentDropDown");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('dropDownVisivel')) {
+        openDropdown.classList.remove('dropDownVisivel');
+      }
+    }
+  }
+}
 
 function mostrarUnidadesCurriculares(unidadesCurriculares){
     var ul = document.getElementById("unidadesCurricularesList");
