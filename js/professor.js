@@ -102,62 +102,99 @@ function displayHome(unidadesCurriculares){
     }
 }
 
-
-
-function adicionarAtividade(){
-    var opcaoSelecionada = bancoProfessor.selectedOption()
-    var id = opcaoSelecionada.value;
-    var titulo = document.getElementById("tituloInput").value;
-    var data = document.getElementById("dataEntregaInput").value;
-    var descricao = document.getElementById("descricaoTextarea").value;
-
+function createBancoAtividade(){
     var bancoAtividades = new Array();
- 
     if(localStorage.Atividades){
-        bancoAtividades = JSON.parse(localStorage.getItem("Atividades"));
-        bancoAtividades.push(new BancoAtividades(id, titulo, data, descricao));
-        localStorage.setItem("Atividades", JSON.stringify(bancoAtividades));
+        bancoAtividades =  JSON.parse(localStorage.getItem("Atividades"));
     }
     else{
-        bancoAtividades[0] = new BancoAtividades(id, titulo, data, descricao);
         localStorage.setItem("Atividades", JSON.stringify(bancoAtividades));
     }
 }
 
+function adicionarAtividade(){
+    var opcaoSelecionada = bancoProfessor.selectedOption()
+    if(opcaoSelecionada.value == ""){
+        document.querySelector("#spam").innerHTML = "Selecione uma Disciplina."; 
+        setTimeout(function(){
+            document.querySelector("#spam").innerHTML = ""; 
+        }, 2000)       
+    }else{
+        var id = opcaoSelecionada.value;
+        var titulo = document.getElementById("tituloInput").value;
+        var data = document.getElementById("dataEntregaInput").value;
+        var descricao = document.getElementById("descricaoTextarea").value;
+
+        if(localStorage.Atividades){
+            bancoAtividades = JSON.parse(localStorage.getItem("Atividades"));
+            bancoAtividades.push(new BancoAtividades(id, titulo, data, descricao));
+            localStorage.setItem("Atividades", JSON.stringify(bancoAtividades));
+        }
+        else{
+            bancoAtividades[0] = new BancoAtividades(id, titulo, data, descricao);
+            localStorage.setItem("Atividades", JSON.stringify(bancoAtividades));
+        }
+        displayAtividades();
+    }
+    
+    
+}   
+
+
 displayAtividades();
+
 function displayAtividades(){
-    console.log("VEm");
-    var atividadesAcionadas = document.getElementById("atividadesAcionadas");
-    var ul = document.getElementById("atividadesAcionadasList"); 
-    var li = document.createElement("li");
-    
-    var h2 = document.createElement("h2");
-    var textNode = document.createTextNode("Texto");
-    h2.appendChild(textNode);
-
-    var pData = document.createElement("p");
-    var textNode = document.createTextNode("Texto");
-    pData.appendChild(textNode);
-
-    var pDescricao = document.createElement("p");
-    var textNode = document.createTextNode("Texto");
-    pDescricao.appendChild(textNode);
-
-    var id = document.createElement("p");
-    var textNode = document.createTextNode("Texto");
-    id.appendChild(textNode);
-
+    if(localStorage.getItem("Atividades")){}else{createBancoAtividade();}
+        
     uc = bancoProfessor.getUnidadesCurricularesUser(bancoSuporte.id);
-    console.log(uc);
-    
     for(let i = 0; i < uc.length; i+=1){
         let turma = uc[i][1].slice(7,uc[i][1].length);
-        let idAtt = uc[i][0] + "- " + turma;  
-        console.log(idAtt);
-        if(idAtt == bancoAtividades[i].id){
+        let idAtt = uc[i][0] + " - " + turma;  
 
+        bancoAtividades = getBancoAtividades();
+        
+        for(let j = 0; j < bancoAtividades.length; j+=1){
+            if(idAtt == bancoAtividades[j].id){
+
+                console.log("");
+
+                var ul = document.getElementById("atividadesAcionadasList"); 
+                var li = document.createElement("li");
+                
+                while (ul.firstChild){
+                    ul.removeChild(ul.firstChild);
+                }
+
+                var h2 = document.createElement("h2");
+                var textNode = document.createTextNode(bancoAtividades[j].titulo);
+                h2.appendChild(textNode);
+    
+                var pData = document.createElement("p");
+                var textNode = document.createTextNode(bancoAtividades[j].data);
+                pData.appendChild(textNode);
+    
+                var pDescricao = document.createElement("p");
+                var textNode = document.createTextNode(bancoAtividades[j].descricao);
+                pDescricao.appendChild(textNode);
+    
+                var id = document.createElement("p");
+                var textNode = document.createTextNode(idAtt);
+                id.appendChild(textNode);
+
+                li.appendChild(h2);
+                li.appendChild(pData);
+                li.appendChild(pDescricao);
+                li.appendChild(id);
+                ul.appendChild(li);
+            }
         }
+        
     }
+function getBancoAtividades(){
+    if(localStorage.getItem("Atividades")){
+        return JSON.parse(localStorage.getItem("Atividades"));
+    }
+}    
     
 
     // var dados = bancoProfessor.listar();
