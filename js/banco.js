@@ -123,6 +123,14 @@ class Suporte {
 		this.id = id;
 	}
 }
+class BancoAtividades{
+	constructor(){
+		this.id;
+		this.titulo;
+		this.data;
+		this.descricao;
+	}
+}
 
 function removerCadastroAluno(){//Remove TODOS Cadastros Incompletos dos alunos.
     var chave = "situacao";

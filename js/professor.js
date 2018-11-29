@@ -26,6 +26,7 @@ class PaginaProfessor{
 
 
 
+
 var bancoAluno = new Banco("Alunos");
 var bancoProfessor = new Banco("Professores");
 var bancoSuporte = JSON.parse(localStorage.getItem("Suporte"));
@@ -93,13 +94,23 @@ function displayHome(unidadesCurriculares){
     select.appendChild(option);
     for(let i = 0; i < unidadesCurriculares.length; i += 1){
         var option = document.createElement("option");
-        var textNode = document.createTextNode(unidadesCurriculares[i][0]);
+        var turma = unidadesCurriculares[i][1].slice(7,unidadesCurriculares[i][1].length);
+        var textNode = document.createTextNode(unidadesCurriculares[i][0] + " - " + turma);
         option.appendChild(textNode);
-        option.value = unidadesCurriculares[i][0];
+        option.value = unidadesCurriculares[i][0] + " - " + turma;
         select.appendChild(option);
     }
 }
 
 function adicionarAtividade(){
     var opcaoSelecionada = bancoProfessor.selectedOption()
+    var bancoAtividades = new bancoAtividades();
+    if(localStorage.Atividades){
+        bancoAtividades = JSON.parse(localStorage.getItem("Atividades"));
+    }
+    else{
+        localStorage.setItem("Atividades", JSON.stingify(bancoAtividades));
+    }
 }
+
+
