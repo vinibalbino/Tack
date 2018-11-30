@@ -208,9 +208,44 @@ function displayAtividades(){
             }
         }
     }
-    function getBancoAtividades(){
-        if(localStorage.getItem("Atividades")){
-            return JSON.parse(localStorage.getItem("Atividades"));
-        }
-    }    
-}   
+function getBancoAtividades(){
+    if(localStorage.getItem("Atividades")){
+        return JSON.parse(localStorage.getItem("Atividades"));
+    }
+}    
+    
+
+    // var dados = bancoProfessor.listar();
+    // var unidadesCurriculares = new Array();
+    // for(let i = 0; i < dados.length; i+=1){
+    //     unidadesCurriculares[i] = dados[i].unidadesCurriculares;
+    // }   
+
+    // bancoAtividades = JSON.parse(localStorage.getItem("Atividades"));
+    // for(let i = 0; i < bancoAtividades.length; i+=1){
+
+    // }
+}
+
+function alterarCadastro() {
+    var usuEdit = document.getElementById("usuEdit").value;
+    var senhaAt = document.getElementById("senhaAtual").value;
+    var novaSenha = document.getElementById("senhaEdit").value;
+    if(usuEdit == bancoSuporte.id && senhaAt != novaSenha) {
+       bancoProfessor.editar("senha", senhaAt, novaSenha)
+    }
+    else {
+        document.querySelector("#spamProfessor").innerHTML = "Usúario não confere ou senha nova igual a antiga"; 
+        setTimeout(function(){
+            document.querySelector("#spamProfessor").innerHTML = ""; 
+        }, 1000)   
+    }
+}
+
+var btn_edit = document.querySelector("#usuarioEdit");
+
+btn_edit.addEventListener('click', function(evt) {
+    evt.preventDefault();
+    document.querySelector("#homeSection").className = "hidden";
+    document.querySelector("#editarUsu").className = "";
+}); 

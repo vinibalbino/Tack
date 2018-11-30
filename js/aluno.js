@@ -25,20 +25,20 @@ var btnUnidadesCurriculares = document.querySelector("#unidadesCurricularesAncho
 var btnMais = document.querySelector("#maisAnchor");
 
 btnHome.addEventListener("click", function(){
-    document.querySelector("#homeSection").className = "";
+    document.querySelector("#homeSectionA").className = "";
     document.querySelector("#unidadesCurricularesSection").className = "hidden";
     document.querySelector("#maisSection").className = "hidden";
 });
 
 btnUnidadesCurriculares.addEventListener("click", function(){
-    document.querySelector("#homeSection").className = "hidden";
+    document.querySelector("#homeSectionA").className = "hidden";
     document.querySelector("#unidadesCurricularesSection").className = "";
     document.querySelector("#maisSection").className = "hidden";
     paginaAluno.displayUdadesCurriculares();
 });
 
 btnMais.addEventListener("click", function(){
-    document.querySelector("#homeSection").className = "hidden";
+    document.querySelector("#homeSectionA").className = "hidden";
     document.querySelector("#unidadesCurricularesSection").className = "hidden";
     document.querySelector("#maisSection").className = "";
 });
@@ -86,3 +86,27 @@ function mostrarUnidadesCurriculares(unidadesCurriculares){
         ul.appendChild(li);
     }
 }
+
+
+function alterarCadastro() {
+    var usuEdit = document.getElementById("usuEdit").value;
+    var senhaAt = document.getElementById("senhaAtual").value;
+    var novaSenha = document.getElementById("senhaEdit").value;
+    if(usuEdit == bancoSuporte.id && senhaAt != novaSenha) {
+       bancoProfessor.editar("senha", senhaAt, novaSenha)
+    }
+    else {
+        document.querySelector("#spamAluno").innerHTML = "Usúario não confere ou senha nova igual a antiga"; 
+        setTimeout(function(){
+            document.querySelector("#spamAluno").innerHTML = ""; 
+        }, 1000)   
+    }
+}
+
+var btn_edit = document.querySelector("#editarUsu");
+
+btn_edit.addEventListener('click', function(evt) {
+    evt.preventDefault();
+    document.querySelector("#homeSectionA").className = "hidden";
+    document.querySelector("#editarUsua").className = "";
+}); 

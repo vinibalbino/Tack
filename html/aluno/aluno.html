@@ -51,9 +51,30 @@
   </header>
   <main>
     <div id="root">
-      <section id="homeSection" class=""></section>
+      <section id="homeSectionA" class=""></section>
       <section id="unidadesCurricularesSection" class="hidden"><ul id="unidadesCurricularesList"></ul></section>
       <section id="maisSection" class="hidden"></section>
+      <section id="editarUsua" class="hidden">
+          <form>
+            <div class="dadoDisciplinaDiv">
+              <input type="text" id="usuEdit" required autofocus/>
+              <label for="usuEdit">Usúario</label>
+            </div>
+            <div class="dadoDisciplinaDiv">
+              <input type="password" id="senhaAtual" required autofocus/>
+              <label for="senhaAtual">Senha Atual</label>
+            </div>
+            <div class="dadoDisciplinaDiv">
+              <input type="password" id="senhaEdit" required autofocus/>
+              <label for="senhaEdit">Nova Senha</label>
+            </div>
+            <div class="botoesFormulario">
+              <input type="button" value="Alterar" onclick="alterarCadastro()" />
+              <input type="reset" value="Limpar" />  
+            </div>
+            <p id="spamAluno"></p>
+          </form> 
+      </section>
     </div>
   </main>
   <footer>

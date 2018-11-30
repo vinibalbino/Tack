@@ -51,7 +51,7 @@
   </header>
   <main>
     <div id="root">
-      <section id="homeSection" class="hidden">
+      <section id="homeSection" class="">
         <div id="adicaoAtividades">
           <form>
               <div id="tituloDiv">
@@ -83,7 +83,8 @@
       </section>
       <section id="unidadesCurricularesSection" class="hidden"><ul id="unidadesCurricularesList"></ul></section>
       <section id="maisSection" class="hidden"></section>
-      <section id="editarUsu">
+      <section id="editarUsu" class="hidden">
+      <form>
         <div class="dadoDisciplinaDiv">
           <input type="text" id="usuEdit" required autofocus/>
           <label for="usuEdit">Usúario</label>
@@ -94,13 +95,14 @@
         </div>
         <div class="dadoDisciplinaDiv">
           <input type="password" id="senhaEdit" required autofocus/>
-          <label for="senhaEdit">Usúario</label>
+          <label for="senhaEdit">Nova Senha</label>
         </div>
-        <div class="dadoDisciplinaDiv">
-          <input type="text" id="senhaEditConfirm" required autofocus/>
-          <label for="senhaEditConfirm">Usúario</label>
+        <div class="botoesFormulario">
+          <input type="button" value="Alterar" onclick="alterarCadastro()" />
+          <input type="reset" value="Limpar" />  
         </div>
-        
+        <p id="spamProfessor"></p>
+      </form> 
       </section>
     </div>
   </main>

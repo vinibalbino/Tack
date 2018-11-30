@@ -285,6 +285,93 @@ header{
     width: 25px;
 }
 
+input{
+    color: var(--white-color);
+    font-size: 16px;
+    padding: 5px 0px 5px  var(--default-semi-aeration);
+    background-color:  rgba(0,0,0,0);
+    border: none;
+    border-bottom: solid 1px var(--white-color);
+    margin: 0px 0px var(--default-semi-aeration) 0px;
+}
+input[type="button"]{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white-color);
+    box-shadow: 3px 15px 20px -7px rgba(52, 73, 94,0.50);  
+    font-size: 16px;
+    padding: 3px 1px 3px 1px;
+    background-color:  var(--secundary-color);
+    border-radius: 3px;
+    border: solid 1px var(--white-color);
+    width: 195px;
+}
+
+.dadoDisciplinaDiv{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dadoDisciplinaDiv input{
+    width: 80%;
+}
+.dadoDisciplinaDiv label{
+    position: absolute;
+    left: calc(var(--default-aeration) + 10%);
+    top: 50%;
+    transform: translateY(-50%);
+}
+.dadoDisciplinaDiv input[type="text"]:valid ~ label{
+    display: none;
+}
+
+.dadoDisciplinaDiv input[type="password"]:valid ~ label{
+    display: none;
+}
+
+.botoesFormulario{
+    display: flex;
+    width: 80%;
+    height: 100%;
+    padding: 0px 0px 0px 3rem;
+    margin: var(--default-semi-aeration) 0px;;
+}
+
+.botoesFormulario input[type="button"], input[type="reset"]{
+    flex: 1;
+}
+.botoesFormulario input[type="button"]{
+    margin-right: var(--default-semi-aeration);
+}
+
+
+input[type="text"],input[type="password"]{
+    background-color: rgba(0, 0, 0, 0.0);
+    border: none;
+    border-bottom: solid var(--white-color) 1px;
+    border-radius: 3px;
+    padding: 3px var(--default-aeration) 5px;
+}
+
+input[type="button"], input[type="reset"]{
+    background-color: var(--secundary-color);
+    border: none;
+    padding: 3px;
+    border-radius: 3px;
+}
+
+#spamAluno{
+    color: var(--tertiary-color);
+    font-size: 16px;
+}
+#finalizarSpam{
+    color: var(--tertiary-color);
+    font-size: 16px;
+}
+
 /* ========================================== */
 
 main{
