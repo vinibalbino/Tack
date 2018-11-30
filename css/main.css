@@ -182,6 +182,7 @@ form{
     left: var(--default-semi-aeration);
     top: 50%;
     transform: translateY(-50%);
+    color: rgb(215, 215, 215);
 }
 #usuario_div input[type="text"]:valid ~ label{
     display: none;
@@ -195,6 +196,7 @@ form{
     left: var(--default-semi-aeration);
     top: 50%;
     transform: translateY(-50%);
+    color: rgb(215, 215, 215);
 }
 #senha_div input[type="password"]:valid ~ label{
     display: none;

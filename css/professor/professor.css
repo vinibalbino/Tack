@@ -233,7 +233,8 @@ header{
 .dropDownVisivel {display: block;}
 
 #user_icon{
-    height: 35px;   
+    height: 35px; 
+
 }
 
 .bottom_header nav ul{
@@ -393,7 +394,20 @@ textarea{
     width: 100%;
 }
 
-
+#atividadesAcionadasList{
+    list-style-type: none;
+}
+#atividadesAcionadasList li{
+    border: solid 1px var(--white-color);
+    border-radius: 3px;
+    padding: var(--default-semi-aeration);
+    margin-bottom: var(--default-semi-aeration);
+}
+#atividadesAcionadasList li p{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
 
 
 
@@ -449,7 +463,7 @@ footer{
     position: absolute;
     bottom: 0;
     position: fixed;
-    background-color: var(--black-color);
+    background-color: rgba(0,0,0,0.2);
     width: 100%;
     height: 80px;
     flex-direction: column;
